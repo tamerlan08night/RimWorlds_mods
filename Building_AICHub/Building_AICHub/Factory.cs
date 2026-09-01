@@ -4,7 +4,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     public class Building_ICFactoryBase : Building_WorkTable
     {

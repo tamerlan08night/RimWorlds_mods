@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace ArknightsArts
+namespace AKE.endfield
 {
     public class Hediff_NatureCorrosion : HediffWithComps
     {
@@ -14,17 +14,14 @@ namespace ArknightsArts
         public const int DamageIntervalTicks = 60;
         public const float DamagePerPulse = 4f;
 
+        private static readonly DamageDef NatureDamageDef =
+            DefDatabase<DamageDef>.GetNamedSilentFail("ArtsDmg_Nature");
+
         public void Initialise(Pawn instigator)
         {
             instigatorCache = instigator;
             expiryTick = Find.TickManager.TicksGame + DurationTicks;
             nextDamageTick = Find.TickManager.TicksGame + DamageIntervalTicks;
-        }
-
-        public void Refresh(Pawn instigator)
-        {
-            instigatorCache = instigator;
-            expiryTick = Find.TickManager.TicksGame + DurationTicks;
         }
 
         public override void Tick()
@@ -44,7 +41,7 @@ namespace ArknightsArts
 
         private void ApplyCorrosionPulse()
         {
-            DamageDef damageDef = DefDatabase<DamageDef>.GetNamedSilentFail("ArtsDmg_Nature") ?? DamageDefOf.Deterioration;
+            DamageDef damageDef = NatureDamageDef ?? DamageDefOf.Deterioration;
             DamageInfo dinfo = new DamageInfo(damageDef, DamagePerPulse, 999f, -1f, instigatorCache ?? pawn);
             pawn.TakeDamage(dinfo);
         }
@@ -60,29 +57,26 @@ namespace ArknightsArts
 
     public static class NatureLogic
     {
+        private static readonly HediffDef CorrosionDef =
+            DefDatabase<HediffDef>.GetNamedSilentFail("Arts_NatureCorrosion");
+
         public static void TriggerNatureCorrosion(Pawn victim, Pawn attacker)
         {
-            HediffDef corrosionDef = DefDatabase<HediffDef>.GetNamedSilentFail("Arts_NatureCorrosion");
-            if (corrosionDef == null) return;
+            if (CorrosionDef == null) return;
 
-            var existing = victim.health.hediffSet.GetFirstHediffOfDef(corrosionDef) as Hediff_NatureCorrosion;
+            var existing = victim.health.hediffSet.GetFirstHediffOfDef(CorrosionDef) as Hediff_NatureCorrosion;
+            if (existing != null) return;
 
-            if (existing != null)
-            {
-                // ПЕРЕПИСАНО: Замість existing.Refresh(attacker);
-                return; // Якщо ворог вже під корозією, нічого не робимо.
-            }
-            else
-            {
-                var corrosion = (Hediff_NatureCorrosion)HediffMaker.MakeHediff(corrosionDef, victim);
-                corrosion.Severity = 0.5f; // Початкова сила
-                victim.health.AddHediff(corrosion);
-                corrosion.Initialise(attacker);
-            }
+            var corrosion = (Hediff_NatureCorrosion)HediffMaker.MakeHediff(CorrosionDef, victim);
+            corrosion.Severity = 0.5f;
+            victim.health.AddHediff(corrosion);
+            corrosion.Initialise(attacker);
         }
 
         public static void ApplyInternalDamage(Pawn victim, Pawn attacker, float amount)
         {
+            if (victim == null || attacker == null) return;
+
             var part = victim.health.hediffSet.GetNotMissingParts()
                 .Where(p => p.depth == BodyPartDepth.Inside).InRandomOrder().FirstOrDefault();
 
@@ -90,7 +84,7 @@ namespace ArknightsArts
 
             DamageInfo internalDinfo = new DamageInfo(
                 DamageDefOf.Stab, amount, armorPenetration: 0f, angle: -1f,
-                instigator: attacker, hitPart: part, weapon: attacker?.equipment?.Primary?.def
+                instigator: attacker, hitPart: part, weapon: attacker.equipment?.Primary?.def
             );
             victim.TakeDamage(internalDinfo);
         }

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
+﻿using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace RE_EndfieldArmory
+namespace AKE.endfield
 {
     [StaticConstructorOnStartup]
     public static class GloriousMemoryModInitializer
@@ -15,16 +13,14 @@ namespace RE_EndfieldArmory
         {
             var harmony = new Harmony("com.re.endfieldarmory.gloriousmemory");
             harmony.PatchAll();
-            Log.Message("[RE_Endfield Armory] Меч Glorious Memory (Славна Пам'ять) підключено до матриці!");
+            Log.Message("[RE_Endfield Armory] Меч Glorious Memory (Славна Пам'ять) ініціалізовано.");
         }
     }
 
-    // Розумний хедифф, який самостійно керує таймерами кожного стаку
     public class Hediff_GloriousMemory : HediffWithComps
     {
         public List<int> expireTicks = new List<int>();
 
-        // Обов'язковий метод для RimWorld, щоб таймери не ламалися при збереженні/завантаженні гри
         public override void ExposeData()
         {
             base.ExposeData();
@@ -41,7 +37,6 @@ namespace RE_EndfieldArmory
             bool changed = false;
             int currentTick = Find.TickManager.TicksGame;
 
-            // Перевіряємо таймери з кінця списку, щоб безпечно видаляти елементи
             for (int i = expireTicks.Count - 1; i >= 0; i--)
             {
                 if (currentTick >= expireTicks[i])
@@ -59,7 +54,6 @@ namespace RE_EndfieldArmory
 
         public void AddStack(int durationTicks)
         {
-            // Якщо вже є 3 стаки, видаляємо найстаріший, щоб дати місце новому
             if (expireTicks.Count >= 3)
             {
                 expireTicks.RemoveAt(0);
@@ -73,71 +67,67 @@ namespace RE_EndfieldArmory
     [HarmonyPatch(typeof(DamageWorker_AddInjury), "Apply")]
     public static class Patch_GloriousMemory_Logic
     {
-        private static Dictionary<int, int> lastTriggerTick = new Dictionary<int, int>();
+        private static readonly HediffDef GmDef =
+            DefDatabase<HediffDef>.GetNamedSilentFail("RE_GloriousMemory");
+        private static readonly HediffDef PhysicDef =
+            DefDatabase<HediffDef>.GetNamedSilentFail("Arts_Physical");
+
+        private static readonly Dictionary<int, int> lastTriggerTick = new Dictionary<int, int>();
+
+        private const int StackCooldownTicks = 30;
+        private const int StackDurationTicks = 1800;
+        private const float BaseDamageMultiplier = 1.07f;
+        private const float PerStackMultiplier = 0.12f;
 
         [HarmonyPrefix]
         public static void Prefix(ref DamageInfo dinfo, Thing thing)
         {
-            if (dinfo.Instigator is Pawn attacker)
+            if (!(dinfo.Instigator is Pawn attacker)) return;
+
+            var primaryWeapon = attacker.equipment?.Primary;
+            if (primaryWeapon?.def?.defName != "RE_GloriousMemory") return;
+
+            float damageMultiplier = BaseDamageMultiplier;
+
+            if (GmDef != null)
             {
-                var primaryWeapon = attacker.equipment?.Primary;
-                if (primaryWeapon?.def?.defName == "RE_GloriousMemory")
+                Hediff gmBuff = attacker.health.hediffSet.GetFirstHediffOfDef(GmDef);
+                if (gmBuff != null && gmBuff.Severity > 0)
                 {
-                    // Пасивна специфікація меча: завжди ATK +7%
-                    float damageMultiplier = 1.07f;
-
-                    // Безпечно шукаємо деф та перевіряємо стаки
-                    HediffDef gmDef = DefDatabase<HediffDef>.GetNamed("RE_GloriousMemory", false);
-                    if (gmDef != null)
-                    {
-                        Hediff gmBuff = attacker.health.hediffSet.GetFirstHediffOfDef(gmDef);
-                        if (gmBuff != null && gmBuff.Severity > 0)
-                        {
-                            // Кожен стак дає +12% урону (Максимум 3 стаки = +36%)
-                            damageMultiplier += (gmBuff.Severity * 0.12f);
-                        }
-                    }
-
-                    dinfo.SetAmount(dinfo.Amount * damageMultiplier);
+                    damageMultiplier += (gmBuff.Severity * PerStackMultiplier);
                 }
             }
+
+            dinfo.SetAmount(dinfo.Amount * damageMultiplier);
         }
 
         [HarmonyPostfix]
         public static void Postfix(DamageInfo dinfo, Thing thing)
         {
-            if (dinfo.Instigator is Pawn attacker && thing is Pawn victim && dinfo.Amount > 0)
+            if (!(dinfo.Instigator is Pawn attacker) || !(thing is Pawn victim) || dinfo.Amount <= 0)
+                return;
+
+            var primaryWeapon = attacker.equipment?.Primary;
+            if (primaryWeapon?.def?.defName != "RE_GloriousMemory") return;
+
+            if (GmDef == null || PhysicDef == null) return;
+
+            if (!victim.health.hediffSet.HasHediff(PhysicDef)) return;
+
+            int currentTick = Find.TickManager.TicksGame;
+            lastTriggerTick.TryGetValue(attacker.thingIDNumber, out int lastTick);
+
+            if (currentTick - lastTick < StackCooldownTicks) return;
+
+            Hediff_GloriousMemory gmBuff = attacker.health.hediffSet.GetFirstHediffOfDef(GmDef) as Hediff_GloriousMemory;
+
+            if (gmBuff == null)
             {
-                var primaryWeapon = attacker.equipment?.Primary;
-                if (primaryWeapon?.def?.defName == "RE_GloriousMemory")
-                {
-                    // Перевіряємо вразливість цілі (наявність Arts_Physical)
-                    HediffDef physicDef = DefDatabase<HediffDef>.GetNamed("Arts_Physical", false);
-                    if (physicDef != null && victim.health.hediffSet.HasHediff(physicDef))
-                    {
-                        int currentTick = Find.TickManager.TicksGame;
-                        lastTriggerTick.TryGetValue(attacker.thingIDNumber, out int lastTick);
-
-                        // Кулдаун тригера: мінімум 0.5с (30 тіків) між отриманням стаків
-                        if (currentTick - lastTick >= 30)
-                        {
-                            HediffDef gmDef = DefDatabase<HediffDef>.GetNamed("RE_GloriousMemory", false);
-                            if (gmDef == null) return;
-
-                            Hediff_GloriousMemory gmBuff = attacker.health.hediffSet.GetFirstHediffOfDef(gmDef) as Hediff_GloriousMemory;
-
-                            if (gmBuff == null)
-                            {
-                                gmBuff = (Hediff_GloriousMemory)attacker.health.AddHediff(gmDef);
-                            }
-
-                            // Додаємо 1 стак, який житиме 30 секунд (1800 тіків)
-                            gmBuff.AddStack(1800);
-                            lastTriggerTick[attacker.thingIDNumber] = currentTick;
-                        }
-                    }
-                }
+                gmBuff = (Hediff_GloriousMemory)attacker.health.AddHediff(GmDef);
             }
+
+            gmBuff.AddStack(StackDurationTicks);
+            lastTriggerTick[attacker.thingIDNumber] = currentTick;
         }
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     /// Властивості, що налаштовуються за допомогою XML, для HediffComp_OripathyProgression.
     /// Розмістіть це в розділі <comps> вашого HediffDef.

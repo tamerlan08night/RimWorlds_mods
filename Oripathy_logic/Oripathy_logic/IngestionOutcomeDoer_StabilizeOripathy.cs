@@ -2,46 +2,42 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     public class IngestionOutcomeDoer_StabilizeOripathy : IngestionOutcomeDoer
     {
+        private static readonly HediffDef OripathyDef =
+            DefDatabase<HediffDef>.GetNamedSilentFail("OE_Oripathy");
+        private static readonly HediffDef StabilizedDef =
+            DefDatabase<HediffDef>.GetNamedSilentFail("OE_OripathyStabilized");
+
         protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested, int ingestedCount)
         {
             if (pawn == null || ingested == null) return;
 
-            // 1. Отримуємо налаштування стабілізатора з XML через DefModExtension
             var ext = ingested.def.GetModExtension<OripathyStabilizerExtension>();
             if (ext == null) return;
 
-            HediffDef oripathyDef = HediffDef.Named("OE_Oripathy");
-            if (oripathyDef == null) return;
+            if (OripathyDef == null) return;
 
-            // 2. Перевіряємо, чи є у пішака Оріпатія
-            Hediff oripathy = pawn.health.hediffSet.GetFirstHediffOfDef(oripathyDef);
-            if (oripathy == null) return; // Якщо не хворий, ліки просто з'їдаються без ефекту
+            Hediff oripathy = pawn.health.hediffSet.GetFirstHediffOfDef(OripathyDef);
+            if (oripathy == null) return;
 
-            // 3. Миттєве зменшення серйозності (якщо вказано в XML)
             if (ext.instantSeverityReduction > 0f)
             {
                 oripathy.Severity = Mathf.Max(0f, oripathy.Severity - ext.instantSeverityReduction);
             }
 
-            // 4. Додаємо окремий бафф-стабілізатор на пішака
-            HediffDef stabilizedDef = HediffDef.Named("OE_OripathyStabilized");
-            if (stabilizedDef != null)
+            if (StabilizedDef != null)
             {
-                // Видаляємо старий бафф, якщо він вже є, щоб оновити тривалість
-                Hediff existingBuff = pawn.health.hediffSet.GetFirstHediffOfDef(stabilizedDef);
+                Hediff existingBuff = pawn.health.hediffSet.GetFirstHediffOfDef(StabilizedDef);
                 if (existingBuff != null)
                 {
                     pawn.health.RemoveHediff(existingBuff);
                 }
 
-                // Створюємо новий бафф
-                Hediff newBuff = HediffMaker.MakeHediff(stabilizedDef, pawn);
-                
-                // Налаштовуємо тривалість через компонент зникнення
+                Hediff newBuff = HediffMaker.MakeHediff(StabilizedDef, pawn);
+
                 var disappearsComp = newBuff.TryGetComp<HediffComp_Disappears>();
                 if (disappearsComp != null)
                 {
@@ -53,7 +49,7 @@ namespace AKEndfield
                 if (pawn.IsColonist)
                 {
                     string label = ext.stabilizerLabel.NullOrEmpty() ? "Stabilizer" : ext.stabilizerLabel;
-                    Messages.Message($"Оріпатію стабілізовано ({label}).", pawn, MessageTypeDefOf.PositiveEvent);
+                    Messages.Message($"Oripathy stabilized ({label}).", pawn, MessageTypeDefOf.PositiveEvent);
                 }
             }
         }

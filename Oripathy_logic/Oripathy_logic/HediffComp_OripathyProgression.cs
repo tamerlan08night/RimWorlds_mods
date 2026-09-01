@@ -4,23 +4,20 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     public class HediffComp_OripathyProgression : HediffComp
     {
-        // ── Стадія 3: Пошкодження органів ─────────────────────────────────────────────
         private bool organDamageApplied;
-
-        // ── Етап 4: Видавання ресурсів ────────────────────────────────────────────
         private int resourceDropTicksRemaining;
-
-        // ── Етап 5: Зворотний відлік до смерті ──────────────────────────────────────────
         private bool inStage5;
         private int stage5TicksRemaining;
 
-        // Жорстко запрограмовані виключення органів
         private static readonly HashSet<string> AlwaysExcludedOrgans =
             new HashSet<string> { "Brain", "Heart" };
+
+        private static readonly HediffDef StabilizedDef =
+            DefDatabase<HediffDef>.GetNamedSilentFail("OE_OripathyStabilized");
 
         public HediffCompProperties_OripathyProgression Props =>
             (HediffCompProperties_OripathyProgression)props;
@@ -31,19 +28,18 @@ namespace AKEndfield
             resourceDropTicksRemaining = Props.resourceDropIntervalTicks;
         }
 
-        // Перевірка заморозки через наявність баффу на пішаку
         private bool IsFrozen
         {
             get
             {
-                HediffDef stabilizedDef = HediffDef.Named("OE_OripathyStabilized");
-                return stabilizedDef != null && Pawn.health.hediffSet.HasHediff(stabilizedDef);
+                return StabilizedDef != null && Pawn.health.hediffSet.HasHediff(StabilizedDef);
             }
         }
 
         public override void CompPostTick(ref float severityAdjustment)
         {
-            // Якщо хвороба заморожена баффом, повністю зупиняємо зміну серйозності (прогресію)
+            if (Pawn == null || Pawn.Dead) return;
+
             if (IsFrozen)
             {
                 severityAdjustment = 0f;
@@ -51,13 +47,11 @@ namespace AKEndfield
 
             float severity = parent.Severity;
 
-            // ── Стадія 3: Одноразова кристалізація органу ───────────────────────
             if (!organDamageApplied && severity >= Props.stage3MinSeverity)
             {
                 TryApplyOrganDamage();
             }
 
-            // ── Етап 4: Періодичне падіння ресурсів ───────────────────────────────
             if (severity >= Props.stage4MinSeverity)
             {
                 resourceDropTicksRemaining--;
@@ -68,10 +62,9 @@ namespace AKEndfield
                 }
             }
 
-            // ── Етап 5: Фатальний зворотний відлік ──────────────────────────────────────
             HandleStage5Tick(severity);
         }
-        
+
         private void HandleStage5Tick(float severity)
         {
             if (severity < Props.stage5MinSeverity)
@@ -91,7 +84,6 @@ namespace AKEndfield
                     MessageTypeDefOf.ThreatBig);
             }
 
-            // Таймер смерті призупиняється, поки пішак заморожений баффом
             if (!IsFrozen)
             {
                 stage5TicksRemaining--;
@@ -105,7 +97,7 @@ namespace AKEndfield
 
         private void TryApplyOrganDamage()
         {
-            organDamageApplied = true; 
+            organDamageApplied = true;
 
             if (Props.organDamageHediffDef == null)
             {
@@ -172,16 +164,15 @@ namespace AKEndfield
         {
             Pawn.Kill(null, parent);
         }
-        
+
         public override void CompExposeData()
         {
             base.CompExposeData();
 
-            // Зберігаємо лише стадії, бо заморозка тепер живе у вигляді окремого Hediff на пішаку
-            Scribe_Values.Look(ref organDamageApplied,        "organDamageApplied",        false);
-            Scribe_Values.Look(ref resourceDropTicksRemaining, "resourceDropTicksRemaining", 60000);
-            Scribe_Values.Look(ref inStage5,                  "inStage5",                  false);
-            Scribe_Values.Look(ref stage5TicksRemaining,      "stage5TicksRemaining",      -1);
+            Scribe_Values.Look(ref organDamageApplied, "organDamageApplied", false);
+            Scribe_Values.Look(ref resourceDropTicksRemaining, "resourceDropTicksRemaining", 30000);
+            Scribe_Values.Look(ref inStage5, "inStage5", false);
+            Scribe_Values.Look(ref stage5TicksRemaining, "stage5TicksRemaining", -1);
         }
     }
 }

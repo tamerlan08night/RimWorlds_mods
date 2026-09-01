@@ -2,17 +2,16 @@ using System.Collections.Generic;
 using RimWorld;
 using Verse;
 
-namespace RE_EndfieldArmory
+namespace AKE.endfield
 {
     public class RE_SkillScalingEntry
     {
         public SkillDef skill;
         public int minSkill = 0;
-        public HediffDef requiredHediff;       // Ефект на власникові
-        public HediffDef requiredTargetHediff; // Ефект на цілі (ворогу)
+        public HediffDef requiredHediff;
+        public HediffDef requiredTargetHediff;
 
         public float damageMultiplier = 1f;
-        public float extraDamageBase = 0f;
         public float armorPenetrationMultiplier = 1f;
         public float meleeParryChanceMultiplier = 1f;
     }
@@ -33,7 +32,7 @@ namespace RE_EndfieldArmory
 
             if (entry.skill != null)
             {
-                var skillRecord = pawn.skills.GetSkill(entry.skill);
+                var skillRecord = pawn.skills?.GetSkill(entry.skill);
                 if (skillRecord == null || skillRecord.Level <= entry.minSkill) return false;
             }
 
@@ -47,7 +46,6 @@ namespace RE_EndfieldArmory
             return true;
         }
 
-        // 1. Метод для шкоди (з підтримкою Physic Arts та адитивною математикою)
         public float GetDamageMultiplier(Pawn p, Pawn target = null)
         {
             float totalMultiplier = 1f;
@@ -55,7 +53,6 @@ namespace RE_EndfieldArmory
             {
                 if (IsActive(p, s, target))
                 {
-                    // Додаємо бонус до загального множника
                     totalMultiplier += (s.damageMultiplier - 1f);
                 }
             }
@@ -75,7 +72,6 @@ namespace RE_EndfieldArmory
             return totalMultiplier;
         }
 
-        // 3. ПОВЕРНУТИЙ МЕТОД: Шанс парирування (виправляє помилку CS1061)
         public float GetParryChanceMultiplier(Pawn p)
         {
             float bonus = 0f;

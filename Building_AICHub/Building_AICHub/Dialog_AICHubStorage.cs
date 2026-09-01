@@ -4,7 +4,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     public class Dialog_AICHubStorage : Window
     {

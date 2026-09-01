@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using HarmonyLib;
+﻿using HarmonyLib;
 using RimWorld;
-using UnityEngine;
 using Verse;
 
-namespace RE_EndfieldArmory
+namespace AKE.endfield
 {
     [StaticConstructorOnStartup]
     public static class GrandVisionModInitializer
@@ -15,81 +11,78 @@ namespace RE_EndfieldArmory
         {
             var harmony = new Harmony("com.re.endfieldarmory.grandvision");
             harmony.PatchAll();
-            Log.Message("[RE_Endfield Armory] Меч Grand Vision (Велич Ендміністратора) успішно синхронізовано з матрицею!");
+            Log.Message("[RE_Endfield Armory] Меч Grand Vision (Велич Ендміністратора) ініціалізовано.");
         }
     }
 
     public class Hediff_EndministratorMajesty : HediffWithComps
     {
-        // Кастомний клас бафу Величі
     }
 
     [HarmonyPatch(typeof(DamageWorker_AddInjury), "Apply")]
     public static class Patch_GrandVision_Logic
     {
+        private static readonly HediffDef MajestyDef =
+            DefDatabase<HediffDef>.GetNamedSilentFail("RE_EndministratorMajesty");
+        private static readonly HediffDef CryoDef =
+            DefDatabase<HediffDef>.GetNamedSilentFail("Arts_Cryo");
+        private static readonly HediffDef PhysicalDef =
+            DefDatabase<HediffDef>.GetNamedSilentFail("Arts_Physical");
+
+        private const int MajestyDurationTicks = 1200;
+
         [HarmonyPrefix]
         public static void Prefix(ref DamageInfo dinfo, Thing thing)
         {
-            if (dinfo.Instigator is Pawn attacker)
+            if (!(dinfo.Instigator is Pawn attacker)) return;
+
+            var primaryWeapon = attacker.equipment?.Primary;
+            if (primaryWeapon?.def?.defName != "RE_GrandVision") return;
+
+            var skillRecord = attacker.skills?.GetSkill(SkillDefOf.Intellectual);
+            if (skillRecord == null || skillRecord.Level <= 10) return;
+
+            float damageMultiplier = 1.0f;
+
+            if (MajestyDef != null && attacker.health.hediffSet.HasHediff(MajestyDef))
             {
-                var primaryWeapon = attacker.equipment?.Primary;
-                if (primaryWeapon?.def?.defName == "RE_GrandVision")
-                {
-                    // HARD режим: якщо Intellectual <= 10, ніяких системних бонусів немає
-                    if (attacker.skills == null || attacker.skills.GetSkill(SkillDefOf.Intellectual).Level <= 10)
-                    {
-                        return;
-                    }
-
-                    float damageMultiplier = 1.0f;
-
-                    // Якщо активна Велич — додаємо чисті +36% фізичного урону
-                    if (attacker.health.hediffSet.HasHediff(HediffDef.Named("RE_EndministratorMajesty")))
-                    {
-                        damageMultiplier += 0.36f;
-                    }
-
-                    dinfo.SetAmount(dinfo.Amount * damageMultiplier);
-                }
+                damageMultiplier += 0.36f;
             }
+
+            dinfo.SetAmount(dinfo.Amount * damageMultiplier);
         }
 
         [HarmonyPostfix]
         public static void Postfix(DamageInfo dinfo, Thing thing)
         {
-            if (dinfo.Instigator is Pawn attacker && thing is Pawn victim && dinfo.Amount > 0)
+            if (!(dinfo.Instigator is Pawn attacker) || !(thing is Pawn victim) || dinfo.Amount <= 0)
+                return;
+
+            var primaryWeapon = attacker.equipment?.Primary;
+            if (primaryWeapon?.def?.defName != "RE_GrandVision") return;
+
+            var skillRecord = attacker.skills?.GetSkill(SkillDefOf.Intellectual);
+            if (skillRecord == null || skillRecord.Level <= 10) return;
+
+            if (MajestyDef == null || CryoDef == null || PhysicalDef == null) return;
+
+            var victimHediffs = victim.health.hediffSet;
+            bool hasCryoMark = victimHediffs.HasHediff(CryoDef);
+            bool hasPhysicMark = victimHediffs.HasHediff(PhysicalDef);
+
+            if (hasCryoMark || hasPhysicMark)
             {
-                var primaryWeapon = attacker.equipment?.Primary;
-                if (primaryWeapon?.def?.defName == "RE_GrandVision")
+                Hediff majestyBuff = attacker.health.hediffSet.GetFirstHediffOfDef(MajestyDef);
+
+                if (majestyBuff == null)
                 {
-                    // Перевірка розуму для активації резонансу Орігініуму
-                    if (attacker.skills == null || attacker.skills.GetSkill(SkillDefOf.Intellectual).Level <= 10)
-                    {
-                        return;
-                    }
+                    majestyBuff = attacker.health.AddHediff(MajestyDef);
+                }
 
-                    var victimHediffs = victim.health.hediffSet;
-
-                    // Звіряємося за залізно підтвердженими дефнеймами з твого Arts-рушія
-                    bool hasCryoMark = victimHediffs.HasHediff(HediffDef.Named("Arts_Cryo"));
-                    bool hasPhysicMark = victimHediffs.HasHediff(HediffDef.Named("Arts_Physical"));
-
-                    if (hasCryoMark || hasPhysicMark)
-                    {
-                        HediffDef majestyDef = HediffDef.Named("RE_EndministratorMajesty");
-                        Hediff majestyBuff = attacker.health.hediffSet.GetFirstHediffOfDef(majestyDef);
-
-                        if (majestyBuff == null)
-                        {
-                            majestyBuff = attacker.health.AddHediff(majestyDef);
-                        }
-
-                        var comp = majestyBuff.TryGetComp<HediffComp_Disappears>();
-                        if (comp != null)
-                        {
-                            comp.ticksToDisappear = 1200; // 20 секунд дії
-                        }
-                    }
+                var comp = majestyBuff.TryGetComp<HediffComp_Disappears>();
+                if (comp != null)
+                {
+                    comp.ticksToDisappear = MajestyDurationTicks;
                 }
             }
         }

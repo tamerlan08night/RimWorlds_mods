@@ -1,6 +1,6 @@
 using Verse;
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     /// Підказка
     /// Додай це розширення DefModExtension до будь-якого ThingDef, щоб зареєструвати його як дійсний стабілізатор Oripathy.

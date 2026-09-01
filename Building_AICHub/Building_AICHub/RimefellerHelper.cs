@@ -2,7 +2,7 @@ using Verse;
 using RimWorld;
 using Rimefeller; // Тепер підсвічуватиметься після додавання DLL
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     public static class RimefellerHelper
     {

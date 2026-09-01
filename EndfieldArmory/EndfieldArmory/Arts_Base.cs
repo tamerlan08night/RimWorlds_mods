@@ -3,7 +3,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace ArknightsArts
+namespace AKE.endfield
 {
     [StaticConstructorOnStartup]
     public static class ArtsSystem
@@ -11,7 +11,7 @@ namespace ArknightsArts
         static ArtsSystem()
         {
             new Harmony("com.endfield.arts.system").PatchAll();
-            Log.Message("<color=#00ff00>[Endfield Armory]</color> Arts System Initialized (Modular .NET 8).");
+            Log.Message("<color=#00ff00>[Endfield Armory]</color> Arts System Initialized.");
         }
     }
 
@@ -49,6 +49,7 @@ namespace ArknightsArts
         public override void Tick()
         {
             base.Tick();
+            if (pawn == null || pawn.Dead) return;
             if (Find.TickManager.TicksGame >= expiryTick)
                 pawn.health.RemoveHediff(this);
         }

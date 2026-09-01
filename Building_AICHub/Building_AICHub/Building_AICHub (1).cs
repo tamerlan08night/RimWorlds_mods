@@ -4,7 +4,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     [StaticConstructorOnStartup]
     public class Building_AICHub : Building
@@ -304,14 +304,11 @@ namespace AKEndfield
             
             Scribe_Values.Look(ref hubName, "hubName"); 
 
-            lock (inventoryLock)
-            {
-                Scribe_Collections.Look(ref inventory, "aicHub_inventory", LookMode.Def, LookMode.Value);
-                if (Scribe.mode == LoadSaveMode.PostLoadInit && inventory == null) inventory = new Dictionary<ThingDef, int>();
+            Scribe_Collections.Look(ref inventory, "aicHub_inventory", LookMode.Def, LookMode.Value);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit && inventory == null) inventory = new Dictionary<ThingDef, int>();
 
-                Scribe_Collections.Look(ref absorptionEnabled, "aicHub_absorptionEnabled", LookMode.Def);
-                if (Scribe.mode == LoadSaveMode.PostLoadInit && absorptionEnabled == null) absorptionEnabled = new HashSet<ThingDef>();
-            }
+            Scribe_Collections.Look(ref absorptionEnabled, "aicHub_absorptionEnabled", LookMode.Def);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit && absorptionEnabled == null) absorptionEnabled = new HashSet<ThingDef>();
         }
 
         public override string GetInspectString()

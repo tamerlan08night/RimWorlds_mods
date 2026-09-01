@@ -6,7 +6,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound; 
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     [StaticConstructorOnStartup]
     public static class OriginiumDrill_Initializer_MKI

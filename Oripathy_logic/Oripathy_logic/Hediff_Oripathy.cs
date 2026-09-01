@@ -1,21 +1,21 @@
 using UnityEngine;
 using Verse;
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     public class Hediff_Oripathy : HediffWithComps
     {
-        // Перевірка наявності баффу OE_OripathyStabilized безпосередньо у HealthTracker
+        private static readonly HediffDef StabilizedDef =
+            DefDatabase<HediffDef>.GetNamedSilentFail("OE_OripathyStabilized");
+
         public bool IsFrozen
         {
             get
             {
-                HediffDef stabilizedDef = HediffDef.Named("OE_OripathyStabilized");
-                return stabilizedDef != null && pawn.health.hediffSet.HasHediff(stabilizedDef);
+                return StabilizedDef != null && pawn.health.hediffSet.HasHediff(StabilizedDef);
             }
         }
 
-        // Автоматично додає відсоток серйозності до назви у вкладці Health
         public override string Label
         {
             get

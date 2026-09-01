@@ -1,6 +1,6 @@
 using Verse;
 
-namespace AKEndfield
+namespace AKE.endfield
 {
     public class RecipeExtension_RimefellerFluid : DefModExtension
     {
