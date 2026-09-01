@@ -74,3 +74,39 @@ C:\Users\krive\Music\C# codes for mod\Oripathy_logic\Oripathy_logic\obj\Debug\Or
 C:\Users\krive\Music\C# codes for mod\Oripathy_logic\Oripathy_logic\obj\Debug\Oripathy.9F5CAA44.Up2Date
 C:\Users\krive\Music\C# codes for mod\Oripathy_logic\Oripathy_logic\obj\Debug\Oripathy_logic.dll
 C:\Users\krive\Music\C# codes for mod\Oripathy_logic\Oripathy_logic\obj\Debug\Oripathy_logic.pdb
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\Oripathy_logic.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\Oripathy_logic.pdb
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.TextRenderingModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\NAudio.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\NVorbis.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.AudioModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\Unity.Collections.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\Unity.Burst.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\Unity.Mathematics.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\com.rlabrecque.steamworks.net.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.AssetBundleModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.PhysicsModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\Unity.TextMeshPro.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\ISharpZipLib.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.InputLegacyModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.PerformanceReportingModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.ImageConversionModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.ScreenCaptureModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.UI.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\netstandard.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.SharedInternalsModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.TextCoreTextEngineModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.PropertiesModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\Unity.Collections.LowLevel.ILSupport.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\Unity.Burst.Unsafe.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.TextCoreFontEngineModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.UIModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.Physics2DModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.AnimationModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\bin\Debug\UnityEngine.SpriteShapeModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\obj\Debug\Oripathy_logic.csproj.AssemblyReference.cache
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\obj\Debug\Oripathy_logic.csproj.CoreCompileInputs.cache
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\obj\Debug\Oripathy.9F5CAA44.Up2Date
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\obj\Debug\Oripathy_logic.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\Oripathy_logic\Oripathy_logic\obj\Debug\Oripathy_logic.pdb

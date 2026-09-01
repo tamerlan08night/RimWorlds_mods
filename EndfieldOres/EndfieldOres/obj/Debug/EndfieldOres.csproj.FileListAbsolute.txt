@@ -158,3 +158,40 @@ C:\Users\krive\Music\C# codes for mod\EndfieldOres\EndfieldOres\obj\Debug\Endfie
 C:\Users\krive\Music\C# codes for mod\EndfieldOres\EndfieldOres\obj\Debug\Endfield.0E8907D4.Up2Date
 C:\Users\krive\Music\C# codes for mod\EndfieldOres\EndfieldOres\obj\Debug\EndfieldOres.dll
 C:\Users\krive\Music\C# codes for mod\EndfieldOres\EndfieldOres\obj\Debug\EndfieldOres.pdb
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\EndfieldOres.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\EndfieldOres.pdb
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.IMGUIModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.TextRenderingModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\NAudio.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\NVorbis.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.AudioModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\Unity.Collections.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\Unity.Burst.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\Unity.Mathematics.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\com.rlabrecque.steamworks.net.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.AssetBundleModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.PhysicsModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\Unity.TextMeshPro.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\ISharpZipLib.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.InputLegacyModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.PerformanceReportingModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.ImageConversionModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.ScreenCaptureModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.UI.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\netstandard.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.SharedInternalsModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.TextCoreTextEngineModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.PropertiesModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\Unity.Collections.LowLevel.ILSupport.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\Unity.Burst.Unsafe.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.TextCoreFontEngineModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.UIModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.Physics2DModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.AnimationModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\bin\Debug\UnityEngine.SpriteShapeModule.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\obj\Debug\EndfieldOres.csproj.AssemblyReference.cache
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\obj\Debug\EndfieldOres.csproj.CoreCompileInputs.cache
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\obj\Debug\Endfield.0E8907D4.Up2Date
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\obj\Debug\EndfieldOres.dll
+C:\Users\krive\RiderProjects\RimWorlds_mods\EndfieldOres\EndfieldOres\obj\Debug\EndfieldOres.pdb
