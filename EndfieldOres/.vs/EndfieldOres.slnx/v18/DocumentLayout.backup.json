@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldOres\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B11E38D4-AFDA-4B6C-B26C-6B0CFB607C6C}|EndfieldOres\\EndfieldOres.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldOres\\endfieldores\\ferium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B11E38D4-AFDA-4B6C-B26C-6B0CFB607C6C}|EndfieldOres\\EndfieldOres.csproj|solutionrelative:endfieldores\\ferium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B11E38D4-AFDA-4B6C-B26C-6B0CFB607C6C}|EndfieldOres\\EndfieldOres.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldOres\\endfieldores\\originium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B11E38D4-AFDA-4B6C-B26C-6B0CFB607C6C}|EndfieldOres\\EndfieldOres.csproj|solutionrelative:endfieldores\\originium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B11E38D4-AFDA-4B6C-B26C-6B0CFB607C6C}|EndfieldOres\\EndfieldOres.csproj|c:\\users\\krive\\music\\c# codes for mod\\endfieldores\\endfieldores\\\u0430methyst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B11E38D4-AFDA-4B6C-B26C-6B0CFB607C6C}|EndfieldOres\\EndfieldOres.csproj|solutionrelative:endfieldores\\\u0430methyst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Originium.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldOres\\EndfieldOres\\Originium.cs",
+              "RelativeDocumentMoniker": "EndfieldOres\\Originium.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldOres\\EndfieldOres\\Originium.cs",
+              "RelativeToolTip": "EndfieldOres\\Originium.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAB5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T14:00:40.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "\u0410methyst.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldOres\\EndfieldOres\\\u0410methyst.cs",
+              "RelativeDocumentMoniker": "EndfieldOres\\\u0410methyst.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldOres\\EndfieldOres\\\u0410methyst.cs",
+              "RelativeToolTip": "EndfieldOres\\\u0410methyst.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T08:51:25.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ferium.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldOres\\EndfieldOres\\Ferium.cs",
+              "RelativeDocumentMoniker": "EndfieldOres\\Ferium.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldOres\\EndfieldOres\\Ferium.cs",
+              "RelativeToolTip": "EndfieldOres\\Ferium.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T08:50:54.038Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

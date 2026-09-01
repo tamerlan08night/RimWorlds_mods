@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{476D603B-256E-4A27-ABF9-BC91B3675B96}|Building_AICHub\\Building_AICHub.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\building_aichub\\factory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{476D603B-256E-4A27-ABF9-BC91B3675B96}|Building_AICHub\\Building_AICHub.csproj|solutionrelative:building_aichub\\factory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{476D603B-256E-4A27-ABF9-BC91B3675B96}|Building_AICHub\\Building_AICHub.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\building_aichub\\drill mk2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{476D603B-256E-4A27-ABF9-BC91B3675B96}|Building_AICHub\\Building_AICHub.csproj|solutionrelative:building_aichub\\drill mk2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{476D603B-256E-4A27-ABF9-BC91B3675B96}|Building_AICHub\\Building_AICHub.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\building_aichub\\drill mk1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{476D603B-256E-4A27-ABF9-BC91B3675B96}|Building_AICHub\\Building_AICHub.csproj|solutionrelative:building_aichub\\drill mk1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{476D603B-256E-4A27-ABF9-BC91B3675B96}|Building_AICHub\\Building_AICHub.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\building_aichub\\dialog_aichubstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{476D603B-256E-4A27-ABF9-BC91B3675B96}|Building_AICHub\\Building_AICHub.csproj|solutionrelative:building_aichub\\dialog_aichubstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{476D603B-256E-4A27-ABF9-BC91B3675B96}|Building_AICHub\\Building_AICHub.csproj|c:\\users\\krive\\music\\c# codes for mod\\building_aichub\\building_aichub\\building_aichub (1).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{476D603B-256E-4A27-ABF9-BC91B3675B96}|Building_AICHub\\Building_AICHub.csproj|solutionrelative:building_aichub\\building_aichub (1).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 285,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Drill mk2.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\Building_AICHub\\Drill mk2.cs",
+              "RelativeDocumentMoniker": "Building_AICHub\\Drill mk2.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\Building_AICHub\\Drill mk2.cs",
+              "RelativeToolTip": "Building_AICHub\\Drill mk2.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAswDUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T15:01:52.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Drill mk1.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\Building_AICHub\\Drill mk1.cs",
+              "RelativeDocumentMoniker": "Building_AICHub\\Drill mk1.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\Building_AICHub\\Drill mk1.cs",
+              "RelativeToolTip": "Building_AICHub\\Drill mk1.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAYwCwBAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T09:51:22.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Factory.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\Building_AICHub\\Factory.cs",
+              "RelativeDocumentMoniker": "Building_AICHub\\Factory.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\Building_AICHub\\Factory.cs",
+              "RelativeToolTip": "Building_AICHub\\Factory.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAuwNQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T21:10:50.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Building_AICHub (1).cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\Building_AICHub\\Building_AICHub (1).cs",
+              "RelativeDocumentMoniker": "Building_AICHub\\Building_AICHub (1).cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\Building_AICHub\\Building_AICHub (1).cs",
+              "RelativeToolTip": "Building_AICHub\\Building_AICHub (1).cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAqwFgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T16:25:40.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dialog_AICHubStorage.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\Building_AICHub\\Dialog_AICHubStorage.cs",
+              "RelativeDocumentMoniker": "Building_AICHub\\Dialog_AICHubStorage.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\Building_AICHub\\Building_AICHub\\Dialog_AICHubStorage.cs",
+              "RelativeToolTip": "Building_AICHub\\Dialog_AICHubStorage.cs",
+              "ViewState": "AgIAANsAAAAAAAAAAAAAAAABAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T16:25:39.806Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

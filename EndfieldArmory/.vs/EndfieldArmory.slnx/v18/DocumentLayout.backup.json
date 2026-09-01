@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\endfieldarmory\\arts_mainpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|solutionrelative:endfieldarmory\\arts_mainpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\endfieldarmory\\arts_electric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|solutionrelative:endfieldarmory\\arts_electric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\endfieldarmory\\arts_cryo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|solutionrelative:endfieldarmory\\arts_cryo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|EndfieldArmory||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\endfieldarmory\\synergy_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|solutionrelative:endfieldarmory\\synergy_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\krive\\Downloads\\CompEdgeOfLightnessAura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\endfieldarmory\\arts_nature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|solutionrelative:endfieldarmory\\arts_nature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\endfieldarmory\\arts_pyro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|solutionrelative:endfieldarmory\\arts_pyro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BD72AF-65DF-49CE-B61B-AEC14919738D}|EndfieldArmory\\EndfieldArmory.csproj|c:\\users\\krive\\music\\c# codes for mod\\endfieldarmory\\endfieldarmory\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 352,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EndfieldArmory",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\EndfieldArmory.csproj",
+              "RelativeDocumentMoniker": "EndfieldArmory\\EndfieldArmory.csproj",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\EndfieldArmory.csproj",
+              "RelativeToolTip": "EndfieldArmory\\EndfieldArmory.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-15T15:49:46.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CompEdgeOfLightnessAura.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Downloads\\CompEdgeOfLightnessAura.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\CompEdgeOfLightnessAura.cs",
+              "ToolTip": "C:\\Users\\krive\\Downloads\\CompEdgeOfLightnessAura.cs",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\CompEdgeOfLightnessAura.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAwwJEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T13:12:18.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Synergy_Patch.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Synergy_Patch.cs",
+              "RelativeDocumentMoniker": "EndfieldArmory\\Synergy_Patch.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Synergy_Patch.cs",
+              "RelativeToolTip": "EndfieldArmory\\Synergy_Patch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T10:26:32.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Arts_Pyro.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Arts_Pyro.cs",
+              "RelativeDocumentMoniker": "EndfieldArmory\\Arts_Pyro.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Arts_Pyro.cs",
+              "RelativeToolTip": "EndfieldArmory\\Arts_Pyro.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T14:41:11.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Arts_Nature.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Arts_Nature.cs",
+              "RelativeDocumentMoniker": "EndfieldArmory\\Arts_Nature.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Arts_Nature.cs",
+              "RelativeToolTip": "EndfieldArmory\\Arts_Nature.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwEoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T14:41:11.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Arts_MainPatch.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Arts_MainPatch.cs",
+              "RelativeDocumentMoniker": "EndfieldArmory\\Arts_MainPatch.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Arts_MainPatch.cs",
+              "RelativeToolTip": "EndfieldArmory\\Arts_MainPatch.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwDAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T14:41:11.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Arts_Electric.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Arts_Electric.cs",
+              "RelativeDocumentMoniker": "EndfieldArmory\\Arts_Electric.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Arts_Electric.cs",
+              "RelativeToolTip": "EndfieldArmory\\Arts_Electric.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAkwEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T14:41:10.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Arts_Cryo.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Arts_Cryo.cs",
+              "RelativeDocumentMoniker": "EndfieldArmory\\Arts_Cryo.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\C# codes for mod\\EndfieldArmory\\EndfieldArmory\\Arts_Cryo.cs",
+              "RelativeToolTip": "EndfieldArmory\\Arts_Cryo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T14:41:10.926Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

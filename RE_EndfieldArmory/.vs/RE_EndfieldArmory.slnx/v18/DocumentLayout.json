@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\krive\\Music\\RE_EndfieldArmory\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A7CF384-CCF1-4FB0-9F46-6E08CD7E548E}|RE_EndfieldArmory\\RE_EndfieldArmory.csproj|c:\\users\\krive\\music\\re_endfieldarmory\\re_endfieldarmory\\re_weaponskillscaling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A7CF384-CCF1-4FB0-9F46-6E08CD7E548E}|RE_EndfieldArmory\\RE_EndfieldArmory.csproj|solutionrelative:re_endfieldarmory\\re_weaponskillscaling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A7CF384-CCF1-4FB0-9F46-6E08CD7E548E}|RE_EndfieldArmory\\RE_EndfieldArmory.csproj|c:\\users\\krive\\music\\re_endfieldarmory\\re_endfieldarmory\\re_harmonypatches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A7CF384-CCF1-4FB0-9F46-6E08CD7E548E}|RE_EndfieldArmory\\RE_EndfieldArmory.csproj|solutionrelative:re_endfieldarmory\\re_harmonypatches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Endfield_armory\\RE_endfieldArmory\\RE_ModEntry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RE_ModEntry.cs",
+              "DocumentMoniker": "C:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Endfield_armory\\RE_endfieldArmory\\RE_ModEntry.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Endfield_armory\\RE_endfieldArmory\\RE_ModEntry.cs",
+              "ToolTip": "C:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Endfield_armory\\RE_endfieldArmory\\RE_ModEntry.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Endfield_armory\\RE_endfieldArmory\\RE_ModEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T21:59:08.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RE_HarmonyPatches.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\RE_EndfieldArmory\\RE_EndfieldArmory\\RE_HarmonyPatches.cs",
+              "RelativeDocumentMoniker": "RE_EndfieldArmory\\RE_HarmonyPatches.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\RE_EndfieldArmory\\RE_EndfieldArmory\\RE_HarmonyPatches.cs",
+              "RelativeToolTip": "RE_EndfieldArmory\\RE_HarmonyPatches.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T15:55:36.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RE_WeaponSkillScaling.cs",
+              "DocumentMoniker": "C:\\Users\\krive\\Music\\RE_EndfieldArmory\\RE_EndfieldArmory\\RE_WeaponSkillScaling.cs",
+              "RelativeDocumentMoniker": "RE_EndfieldArmory\\RE_WeaponSkillScaling.cs",
+              "ToolTip": "C:\\Users\\krive\\Music\\RE_EndfieldArmory\\RE_EndfieldArmory\\RE_WeaponSkillScaling.cs",
+              "RelativeToolTip": "RE_EndfieldArmory\\RE_WeaponSkillScaling.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T15:53:52.15Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
