@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+
+        <defName>IC_ArmsINSPSet</defName>
+        <label>Arms INSP Set</label>
+        <description>A single-use toolset with AIC technology. Provides automated in-depth inspection of the entire weapon structure. Also repairs internal material damage and significantly enhances weapon performanceA single-use toolset with AIC technology. Provides automated in-depth inspection of the entire weapon structure. Also repairs internal material damage and significantly enhances weapon performance.</description>
+
+        <graphicData>
+            <texPath>Things/Resource/IC_ArmsINSPSet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <MarketValue>120</MarketValue>
+            <Mass>2</Mass>
+            <Flammability>0.5</Flammability>
+            <DeteriorationRate>3.0</DeteriorationRate>
+        </statBases>
+
+        <!-- 5. Категорія на Складі -->
+        <thingCategories>
+            <li>Manufactured</li> <!-- Лежатиме поруч із компонентами та приладами -->
+        </thingCategories>
+
+        <stackLimit>50</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <burnableByRecipe>false</burnableByRecipe>
+
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
+</Defs>

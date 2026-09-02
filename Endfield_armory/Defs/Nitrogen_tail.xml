@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseFilth">
+        <defName>IC_Filth_LiquidNitrogen</defName>
+        <label>liquid nitrogen pool</label>
+        <description>A freezing pool of spilled liquid nitrogen. Severely hampers movement before evaporating into thin air.</description>
+        <statBases>
+            <Beauty>0</Beauty>
+            <Cleanliness>0</Cleanliness>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Effects/Nitrogen_gun/Nitrogen_stain</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+        <filth>
+            <rainWashes>true</rainWashes>
+            <disappearsInDays>0.02</disappearsInDays> <!-- Випаровується через ~30 секунд -->
+            <allowsFire>false</allowsFire> <!-- Гасить вогонь при появі та забороняє повторне загоряння -->
+        </filth>
+    </ThingDef>
+
+</Defs>

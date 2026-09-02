@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeArmsINSPKit</defName>
+        <label>Craft arms ISPK kit</label>
+        <description>A single-use mini-kit with AIC technology. Provides automated inspection of the entire weapon structure. Also repairs internal material damage and enhances weapon performance.</description>
+        <jobString>Crafting arms INSP kit</jobString>
+        <workAmount>2400</workAmount> <!-- 40 seconds (40 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_gearing</soundWorking>
+
+        <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_FerriumPart</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_ArmsInspector</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IC_FerriumPart</li>
+                <li>IC_ArmsInspector</li>
+                <li>Steel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_GearingUnit</li>
+        </recipeUsers>
+
+        <products>
+            <IC_ArmsINSPKit>1</IC_ArmsINSPKit>
+        </products>
+    </RecipeDef>
+</Defs>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <SoundDef>
+        <defName>EF_packaging</defName>
+        <sustain>True</sustain>
+        <maxSimultaneous>2</maxSimultaneous>
+        <context>MapOnly</context> <!-- Обов'язково для звуків на карті -->
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <muteWhenPaused>True</muteWhenPaused> <!-- Пауза при зупинці гри -->
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Factory/Packaging</clipPath> <!-- Файл Sounds/Factory/Crasher.ogg або .wav -->
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>80</min>
+                    <max>100</max>
+                </volumeRange> 
+                <pitchRange>
+                    <min>0.95</min>
+                    <max>1.05</max>
+                </pitchRange>
+                <distRange>
+                    <min>0</min>
+                    <max>30</max>
+                </distRange> <!-- Чутно від 0 до 30 клітинок -->
+            </li>
+        </subSounds>
+    </SoundDef>
+
+</Defs>

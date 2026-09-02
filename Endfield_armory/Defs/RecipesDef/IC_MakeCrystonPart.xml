@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeCrystonPart</defName>
+    <label>make cryston part</label>
+    <description>Fabricate a specialized component using cryston fiber.</description>
+    <jobString>Making cryston part.</jobString>
+    <workAmount>1500</workAmount> <!-- 25 seconds (25 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>EF_fitting</soundWorking>
+
+    <researchPrerequisite>EM_AdvancedMaterials</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_CrystonFiber</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_CrystonFiber</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>IC_AIC_FittingUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_CrystonPart>1</IC_CrystonPart>
+    </products>
+  </RecipeDef>
+</Defs>

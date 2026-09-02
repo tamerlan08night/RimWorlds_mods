@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp">
+    <defName>RE_Aspirant</defName>
+    <label>Aspirant</label>
+    <description>A weapon equipped by Endfield operators to significantly boost their combat capabilities. A first tier weapon released by Hongshan Swordmancers and also the only one that achieved decent popularity in the market. Many copies have been found in the wildlands, though.\n\n[Weapon Specification]: Infused with Physical Arts. Requires Melee level 11+ to unleash full combat potential, doubling its base damage.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Aspirant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    
+    <smeltable>true</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="AKE.endfield.CompProperties_ArtsWeapon">
+        <appliesElement>Physical</appliesElement>
+        <applyChance>0.7</applyChance>
+        <internalDamageOnFire>true</internalDamageOnFire>
+      </li>
+      <li Class="AKE.endfield.CompProperties_WeaponSkillScaling">
+        <scalings>
+          <li>
+            <skill>Melee</skill>
+            <minSkill>7</minSkill> <damageMultiplier>2.0</damageMultiplier>
+          </li>
+        </scalings>
+      </li>
+    </comps>
+
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>1.5</Mass>
+      <MarketValue>1200</MarketValue>
+    </statBases>
+    
+    <costList>
+      <Steel>75</Steel>
+      <IC_CastDie>5</IC_CastDie>
+      <IC_ArmsInspector>5</IC_ArmsInspector>
+    </costList>
+    
+    <recipeMaker>
+      <researchPrerequisite>EV_EndfieldMobilization</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>8</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities><li>Stab</li></capacities>
+        <power>11</power>
+        <cooldownTime>1.4</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities><li>Cut</li></capacities>
+        <power>13</power>
+        <cooldownTime>1.0</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

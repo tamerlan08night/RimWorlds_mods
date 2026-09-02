@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Combat Extended</li></mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="RE_WhiteNightNova"]/tools</xpath>
+          <value>
+            <tools>
+              <li Class="CombatExtended.ToolCE">
+                <label>point</label>
+                <capacities><li>Stab</li></capacities>
+                <power>21</power>
+                <cooldownTime>1.2</cooldownTime>
+                <armorPenetrationSharp>22</armorPenetrationSharp>
+                <armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+              </li>
+              <li Class="CombatExtended.ToolCE">
+                <label>blade</label>
+                <capacities><li>Cut</li></capacities>
+                <power>25</power>
+                <cooldownTime>1.1</cooldownTime>
+                <armorPenetrationSharp>15</armorPenetrationSharp>
+                <armorPenetrationBlunt>6.5</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+                <extraMeleeDamages>
+                  <li>
+                    <def>ArtsDmg_Electric</def>
+                    <amount>6</amount>
+                  </li>
+                </extraMeleeDamages>
+              </li>
+            </tools>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RE_WhiteNightNova"]/statBases</xpath>
+          <value>
+            <Bulk>4.0</Bulk>
+            <MeleeCritChance>0.35</MeleeCritChance>
+            <MeleeParryChance>0.60</MeleeParryChance>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+</Patch>

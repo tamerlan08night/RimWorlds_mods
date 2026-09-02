@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>IC_AmethystFiber</defName>
+    <label>Amethyst fiber</label>
+    <description>Flexible yet rigid amethyst fibers used in advanced engineering and manufacturing of structural materials and electronics. Factory-drawn Amethyst fibers exhibit vastly increased strength.</description>
+    
+    <graphicData>
+      <texPath>Things/Resource/IC_AmethystFiber</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+
+    <!-- 4. Характеристики -->
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>    <!-- Міцність при вибухах -->
+      <MarketValue>8</MarketValue>       <!-- Ціна за 1 шт -->
+      <Mass>0.25</Mass>                 <!-- Вага прутів/трубок -->
+      <Flammability>0.0</Flammability>   <!-- Твердий аметист взагалі не горить -->
+    </statBases>
+
+    <!-- 5. Категорія на Складі -->
+    <thingCategories>
+      <li>Manufactured</li> <!-- Лежатиме поруч із компонентами -->
+    </thingCategories>
+
+    <!-- 6. Зберігання та Логіка -->
+    <stackLimit>75</stackLimit>           
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <burnableByRecipe>false</burnableByRecipe>
+    
+    <tradeTags>
+      <li>IndustrialAdvanced</li>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

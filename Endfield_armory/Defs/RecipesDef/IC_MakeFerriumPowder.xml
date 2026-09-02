@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeFerriumPowder</defName>
+    <label>shred ferrium cube</label>
+    <description>Shred a ferrium cube into a homogenized ferrium powder.</description>
+    <jobString>Shredding ferrium cube.</jobString>
+    <workAmount>600</workAmount> <!-- 10 seconds (10 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>EF_crasher</soundWorking>
+
+    <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_FerriumCube</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_FerriumCube</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>IC_AIC_ShreddingUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_FerriumPowder>1</IC_FerriumPowder>
+    </products>
+  </RecipeDef>
+</Defs>

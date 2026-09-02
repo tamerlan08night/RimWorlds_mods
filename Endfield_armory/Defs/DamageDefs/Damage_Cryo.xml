@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef ParentName="Arknights_Arts_DamageBase">
+    <defName>Arknights_Cryo_Damage</defName>
+    <label>cryo strike</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <deathMessage>Was frozen to death.</deathMessage>
+  </DamageDef>
+</Defs>

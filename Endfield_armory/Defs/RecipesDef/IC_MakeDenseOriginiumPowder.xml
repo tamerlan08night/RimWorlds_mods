@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeDenseOriginiumPowder</defName>
+    <label>make dense originium powder</label>
+    <description>Compress sandleaf powder and originium powder into a dense block of originium compound.</description>
+    <jobString>Compressing dense originium powder.</jobString>
+    <workAmount>1800</workAmount> <!-- 30 seconds (30 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>EF_griding</soundWorking>
+
+    <researchPrerequisite>EM_AdvancedMaterials</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_SandleafPowder</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_OriginiumPowder</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_SandleafPowder</li>
+        <li>IC_OriginiumPowder</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>IC_AIC_GrindingUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_DenseOriginiumPowder>1</IC_DenseOriginiumPowder>
+    </products>
+  </RecipeDef>
+</Defs>

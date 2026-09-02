@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>OE_OriginiumDrill_MKII</defName>
+    <label>Deep drill-MKII</label>
+    <description>The MK-2 Advanced Automated Deep Mining Station is designed to mine underground minerals directly into an internal localized buffer. Unlike the MK-1, the drill head is also coated with a layer of plastal and a coating of cryston and originium, which improves drilling speed. Equipped with an integrated short-range quantum matrix, it autonomously transfers all accumulated resources directly to a manually connected AIC logistics center every 20 seconds, completely eliminating manual transportation. It has a compact modular chassis that allows it to be easily dismantled and moved to new deposits.</description>
+
+    <!-- ── C# INTEGRATION (Збережено твою автоматизацію) ── -->
+    <thingClass>AKE.endfield.Building_OriginiumDrill</thingClass>
+    <tickerType>Normal</tickerType>
+
+    <!-- ── GRAPHICS & RENDERING ── -->
+    <graphicData>
+      <texPath>Things/Building/Drills/Drill_MKI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.5,2.5)</drawSize>
+      <!-- Взято красиву тінь з ванільного бура -->
+      <shadowData>
+        <volume>(0.52, 0.53, 0.09)</volume>
+        <offset>(0,0,-0.43)</offset>
+      </shadowData>
+    </graphicData>
+
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <!-- ВИПРАВЛЕНО: PassThroughOnly замість Impassable. Це прибере ту саму "Config error" з попереднього питання, бо fillPercent у тебе 0.65 -->
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.65</fillPercent>
+    <pathCost>50</pathCost>
+    <rotatable>false</rotatable>
+    <castEdgeShadows>true</castEdgeShadows>
+
+    <!-- ── STRUCTURAL STATS (Твої балансні числа) ── -->
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Flammability>0.2</Flammability>
+      <Beauty>-10</Beauty>
+      <Mass>35</Mass>
+    </statBases>
+
+    <!-- ── PACKAGING MECHANICS ── -->
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+
+    <!-- ── ECONOMY & CRAFTING COST ── -->
+    <costList>
+      <Steel>300</Steel>
+      <IC_Transportpackage>1</IC_Transportpackage>
+      <IC_Automationpackage>1</IC_Automationpackage>
+      <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
+
+    <!-- ── VANILLA REQUIREMENTS ── -->
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>DeepDrilling</li> <!-- Або твоє власне дослідження -->
+    </researchPrerequisites>
+
+    <!-- ── UI & CATEGORIZATION ── -->
+    <designationCategory>Production</designationCategory>
+
+    <!-- ── EXTRA BUILDING PROPERTIES ── -->
+    <building>
+      <uninstallWork>500</uninstallWork>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound> <!-- Додано звук руйнування з ванілі -->
+    </building>
+
+    <!-- ── COMPS & SUBSYSTEMS ── -->
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Forbiddable"/> <!-- З ванілі. Дозволяє забороняти об'єкт хрестиком -->
+    </comps>
+
+    <!-- ── INTERFACE OVERLAYS ── -->
+    <placeWorkers>
+      <li>PlaceWorker_DeepDrill</li> <!-- Ванільний сканер підземних ресурсів -->
+      <!-- Якщо PlaceWorker_ShowDeepResources - це твій кастомний код, можеш повернути його сюди -->
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+</Defs>               

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_DenseOrigocrustPowder</defName>
+        <label>Dense origocrust powder</label>
+        <description>Techno-Protocol grinding is used to prepare this dense powdered form of Origocrust with particles almost invisible to the unaided eye.</description>
+
+        <graphicData>
+            <texPath>Things/Resource/IC_DenseOrigocrustPowder</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.85, 0.85)</drawSize>
+        </graphicData>
+
+        <soundInteract>ChunkRock_Drop</soundInteract>
+        <soundDrop>ChunkRock_Drop</soundDrop>
+
+        <!-- Характеристики -->
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <MarketValue>25</MarketValue>               <!-- Вартість -->
+            <Mass>0.8</Mass>                          <!-- Вага -->
+            <Flammability>0.0</Flammability>
+        </statBases>
+
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+
+        <!-- Зберігання та Логіка -->
+        <stackLimit>75</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <burnableByRecipe>false</burnableByRecipe>
+
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
+</Defs>

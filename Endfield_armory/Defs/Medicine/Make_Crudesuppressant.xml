@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>OE_OripathySuppressantFolk</defName>
+        <label>make oripathy inhibitor</label>
+        <description>Synthesize oripathy inhibitors by combining neutroamine and herbal medicine to suppress crystal progression.</description>
+        <jobString>Synthesizing oripathy inhibitor.</jobString>
+        <workAmount>2000</workAmount>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Drug</soundWorking>
+        <researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineHerbal</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Neutroamine</li>
+                <li>MedicineHerbal</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+
+        <products>
+            <OE_OripathySuppressantFolk>1</OE_OripathySuppressantFolk>
+        </products>
+    </RecipeDef>
+</Defs>

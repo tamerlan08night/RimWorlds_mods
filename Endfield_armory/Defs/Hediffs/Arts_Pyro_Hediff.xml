@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef ParentName="Arknights_Arts_BaseHediff">
+    <defName>Arknights_Arts_Pyro_Hediff</defName>
+    <label>pyro resonance</label>
+    <description>Resonance of the Fire Element. Each stage increases the target's vulnerability to high temperatures. At stage 4, the energy detonates, creating a powerful explosion.</description>
+    <hediffClass>AKE.endfield.Hediff_ArtsElement</hediffClass>
+    <stages>
+      <li>
+        <label>heating</label>
+        <statOffsets>
+          <Flammability>0.20</Flammability> </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.41</minSeverity>
+        <label>overheating</label>
+        <statOffsets>
+          <Flammability>0.50</Flammability>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.76</minSeverity>
+        <label>critical heat</label>
+        <statOffsets>
+          <Flammability>1.0</Flammability>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>IGNITED</label>
+        <statOffsets>
+          <Flammability>2.0</Flammability>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

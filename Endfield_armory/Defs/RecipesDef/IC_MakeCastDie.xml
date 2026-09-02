@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_CastDie</defName>
+        <label>Craft cast die</label>
+        <description>A casting die made using rare materials. Techno-Protocol activation lets this die enhance general material strengths in weapons.</description>
+        <jobString>Crafting arms INSP Set</jobString>
+        <workAmount>5400</workAmount> <!-- 90 seconds (90 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_refinery</soundWorking>
+
+        <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                        <li>IC_EndfieldSteel</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_DenseOrigocrustPowder</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_FerriumPowder</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IC_DenseOrigocrustPowder</li>
+                <li>IC_FerriumPowder</li>
+                <li>Steel</li>
+                <li>IC_SteelPart</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>AIC_RefiningUnit</li>
+        </recipeUsers>
+        
+
+        <products>
+            <IC_CastDie>1</IC_CastDie>
+        </products>
+    </RecipeDef>
+</Defs>

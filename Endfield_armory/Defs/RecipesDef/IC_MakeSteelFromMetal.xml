@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <RecipeDef>
+        <defName>RF_SmeltingScrapMetal</defName>
+        <label>Smelting of scrap metal.</label>
+        <description>Smelt scrap metal into steel.</description>
+        <jobString>Smelting scrap metal.</jobString>
+        <workAmount>1800</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_refinery</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ChunkSlagSteel</li>
+                        <li>ChunkMechanoidSlag</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ChunkSlagSteel</li>
+                <li>ChunkMechanoidSlag</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>AIC_RefiningUnit</li>
+        </recipeUsers>
+
+        <products>
+            <Steel>15</Steel>
+        </products>
+
+    </RecipeDef>
+</Defs>

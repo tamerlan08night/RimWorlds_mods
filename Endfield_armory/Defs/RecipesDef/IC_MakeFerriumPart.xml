@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeFerriumPart</defName>
+    <label>craft ferrium part</label>
+    <description>Assemble a ferrium electronic component using ferrium cubes and steel framework.</description>
+    <jobString>Crafting ferrium part.</jobString>
+    <workAmount>1200</workAmount> <!-- 20 seconds (20 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>EF_fitting</soundWorking>
+
+    <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_FerriumCube</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_FerriumCube</li>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>IC_AIC_FittingUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_FerriumPart>1</IC_FerriumPart>
+    </products>
+  </RecipeDef>
+</Defs>

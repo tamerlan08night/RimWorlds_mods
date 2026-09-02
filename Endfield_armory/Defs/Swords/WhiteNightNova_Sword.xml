@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>RE_WhiteNightNova</defName>
+    <label>White Night Nova</label>
+    <description>A weapon equipped by Endfield operators to significantly boost their combat capabilities. One of the weapons from the furnaces of Fort Forgefane. The grip was constructed using a special rod drawing process to enhance force damping and grip. The blade itself was forged with a rare mineral quarried from the wildlands.\n\n[Weapon Specification]: 6-Star Legendary Blade. High Arts conductivity grants 35% chance on hit to trigger Electric Resonance, sending high-voltage arcs through targets.</description>
+    <graphicData>
+      <texPath>Things/Weapons/WhiteNightNova</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <WorkToMake>65000</WorkToMake>
+      <Mass>1.5</Mass>
+      <MarketValue>2200</MarketValue>
+    </statBases>
+
+    <equippedStatOffsets>
+      <MeleeHitChance>0.15</MeleeHitChance>
+    </equippedStatOffsets>
+
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="AKE.endfield.CompProperties_ArtsWeapon">
+        <appliesElement>Electric</appliesElement>
+        <applyChance>0.35</applyChance>
+        <bonusPerStage>0.12</bonusPerStage>
+      </li>
+    </comps>
+
+    <costList>
+      <IC_Origocrust>70</IC_Origocrust>
+      <Steel>50</Steel>
+      <IC_HeavyCastDie>4</IC_HeavyCastDie>
+      <IC_ArmsINSPSet>2</IC_ArmsINSPSet>
+    </costList>
+
+    <recipeMaker>
+      <researchPrerequisite>EV_AdvancedCloseCombat</researchPrerequisite>
+      <skillRequirements><Crafting>10</Crafting></skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities><li>Stab</li></capacities>
+        <power>22</power>
+        <cooldownTime>1.3</cooldownTime>
+        <armorPenetration>0.55</armorPenetration>
+      </li>
+      <li>
+        <label>blade</label>
+        <capacities><li>Cut</li></capacities>
+        <power>26</power>
+        <cooldownTime>1.1</cooldownTime>
+        <armorPenetration>0.45</armorPenetration>
+        <extraMeleeDamages>
+          <li>
+            <def>ArtsDmg_Electric</def>
+            <amount>6</amount>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

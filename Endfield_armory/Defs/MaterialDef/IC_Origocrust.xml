@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_Origocrust</defName>
+        <label>Origocrust</label>
+        <description>A processed outer layer of raw originium, shaped into a stable crystal fragment. The thickness of the crystalline crust encasing an Originium formation (referred to as Origocrust) is often used to determine the age of the Originium vein.</description>
+        <graphicData>
+            <texPath>Things/Resource/IC_Origocrust</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>    <!-- Можна знищити вибухом чи вогнем -->
+            <MarketValue>2</MarketValue>       <!-- Базова ціна -->
+            <Mass>0.5</Mass>                  <!-- Вага -->
+            <Flammability>0.2</Flammability>   <!-- Трохи горить -->
+        </statBases>
+        <soundInteract>ChunkRock_Drop</soundInteract>
+        <soundDrop>ChunkRock_Drop</soundDrop>
+        <thingCategories>
+            <li>Manufactured</li> 
+        </thingCategories>
+        <stackLimit>75</stackLimit>            
+        <useHitPoints>true</useHitPoints>   
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <burnableByRecipe>false</burnableByRecipe> <!-- Не можна спалити як сміття -->
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+</Defs>

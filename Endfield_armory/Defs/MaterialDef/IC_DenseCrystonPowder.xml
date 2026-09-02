@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_CrystonPowder</defName>
+        <label>Cryston powder</label>
+        <description>After fine grinding, improperly stored Cryston Powder will start to "flow" in non-hermetic containers due to Techno-Protocol influences.</description>
+
+        <graphicData>
+            <texPath>Things/Resource/IC_DenseCrystonPowder</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.85, 0.85)</drawSize>
+        </graphicData>
+
+        <soundInteract>ChunkRock_Drop</soundInteract>
+        <soundDrop>ChunkRock_Drop</soundDrop>
+
+        <!-- 4. Характеристики -->
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>            <!-- Порошковий блок менш міцний за цілісний кристал -->
+            <MarketValue>45</MarketValue>               <!-- Вартість -->
+            <Mass>0.8</Mass>                          <!-- Вага -->
+            <Flammability>0.0</Flammability>
+        </statBases>
+
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+
+        <!-- 6. Зберігання та Логіка -->
+        <stackLimit>75</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <burnableByRecipe>false</burnableByRecipe>
+
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
+</Defs>

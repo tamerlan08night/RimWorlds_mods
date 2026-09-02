@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Піщанник -->
+    <RecipeDef>
+        <defName>RF_FireBlocksSandstone</defName>
+        <label>Fire blocks sandstone.</label>
+        <description>Fire bricks from Sandstone.</description>
+        <jobString>Fire the bricks.</jobString>
+        <workAmount>1800</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_refinery</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ChunkSandstone</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ChunkSandstone</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>AIC_RefiningUnit</li>
+        </recipeUsers>
+
+        <products>
+            <BlocksSandstone>20</BlocksSandstone>
+        </products>
+
+    </RecipeDef>
+
+    <!-- Граніт -->
+    <RecipeDef>
+        <defName>RF_FireBlocksGranite</defName>
+        <label>Fire granite bricks.</label>
+        <description>Fire bricks from granite.</description>
+        <jobString>Fire the bricks.</jobString>
+        <workAmount>1800</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_refinery</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ChunkGranite</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ChunkGranite</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>AIC_RefiningUnit</li>
+        </recipeUsers>
+
+        <products>
+            <BlocksGranite>20</BlocksGranite>
+        </products>
+
+    </RecipeDef>
+
+    <!-- Вапняк -->
+    <RecipeDef>
+        <defName>RF_FireBlocksLimestone</defName>
+        <label>Fire limestone bricks.</label>
+        <description>Fire bricks from limestone.</description>
+        <jobString>Fire the bricks.</jobString>
+        <workAmount>1800</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_refinery</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ChunkLimestone</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ChunkLimestone</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>AIC_RefiningUnit</li>
+        </recipeUsers>
+
+        <products>
+            <BlocksLimestone>20</BlocksLimestone>
+        </products>
+
+    </RecipeDef>
+
+    <!-- Сланець -->
+    <RecipeDef>
+        <defName>RF_FireBlocksSlate</defName>
+        <label>Fire slate bricks.</label>
+        <description>Fire bricks from slate.</description>
+        <jobString>Fire the bricks.</jobString>
+        <workAmount>1800</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_refinery</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ChunkSlate</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ChunkSlate</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>AIC_RefiningUnit</li>
+        </recipeUsers>
+
+        <products>
+            <BlocksSlate>20</BlocksSlate>
+        </products>
+
+    </RecipeDef>
+
+    <!-- Мармур -->
+    <RecipeDef>
+        <defName>RF_FireBlocksMarble</defName>
+        <label>Fire marble bricks.</label>
+        <description>Fire bricks from marble.</description>
+        <jobString>Fire the bricks.</jobString>
+        <workAmount>1800</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_refinery</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ChunkMarble</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ChunkMarble</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>AIC_RefiningUnit</li>
+        </recipeUsers>
+
+        <products>
+            <BlocksMarble>20</BlocksMarble>
+        </products>
+
+    </RecipeDef>
+</Defs>

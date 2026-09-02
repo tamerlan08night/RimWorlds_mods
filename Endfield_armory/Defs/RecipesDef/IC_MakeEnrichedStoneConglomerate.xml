@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeEnrichedStoneConglomerate</defName>
+        <label>Enriched stone conglomerate</label>
+        <description>Mix and grind Origocrust and stone dust for further processing.</description>
+        <jobString>Mix stones.</jobString>
+        <workAmount>1000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_crasher</soundWorking>
+
+        <researchPrerequisite>EM_metalForming</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_OrigocrustPowder</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_StoneDust</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IC_OrigocrustPowder</li>
+                <li>IC_StoneDust</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_GrindingUnit</li>
+        </recipeUsers>
+
+        <products>
+            <IC_EnrichedStoneConglomerate>1</IC_EnrichedStoneConglomerate>
+        </products>
+
+    </RecipeDef>
+</Defs>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_Biomass</defName>
+        <label>Biomass</label>
+        <description>Biomass, a substance made by processing organic matter or plants. It can be used to create fuel.</description>
+
+        <graphicData>
+            <texPath>Things/Resource/IC_Biomass</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>           <!-- Прес-форма з рідкісних сплавів дуже міцна -->
+            <MarketValue>10</MarketValue>              <!-- Рідкісні матеріали + технології = висока ціна -->
+            <Mass>1</Mass>                             <!-- Суцільна металева штампувальна форма має вагу -->
+            <Flammability>0.7</Flammability>
+        </statBases>
+
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+
+        <stackLimit>75</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <burnableByRecipe>false</burnableByRecipe>
+
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+        </tradeTags>
+    </ThingDef>
+
+</Defs>

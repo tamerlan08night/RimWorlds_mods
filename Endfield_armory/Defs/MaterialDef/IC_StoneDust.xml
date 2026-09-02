@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_StoneDust</defName>
+        <label>Stone dust</label>
+        <description>Crushed stone prepared for further mixing and processing.</description>
+        <graphicData>
+            <texPath>Things/Resource/IC_StoneDust</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <MarketValue>0.5</MarketValue>
+            <Mass>0.1</Mass>
+            <Flammability>0.0</Flammability>
+        </statBases>
+        <soundInteract>Grain_Drop</soundInteract> <!-- Звуки сипучого матеріалу -->
+        <soundDrop>Grain_Drop</soundDrop>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <stackLimit>150</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <burnableByRecipe>false</burnableByRecipe>
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+        </tradeTags>
+    </ThingDef>
+</Defs>

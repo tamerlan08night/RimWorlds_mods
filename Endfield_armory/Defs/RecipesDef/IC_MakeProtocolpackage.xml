@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeProtocolpackage</defName>
+        <label>Craft protocol package</label>
+        <description>A set of utilities and protocols for transferring resources and data that is necessary to provide stable operation of machines and a resource distribution center. Requires long development and also requires good mental skills.</description>
+        <jobString>Crafting protocol package</jobString>
+        <workAmount>14400</workAmount> <!-- 240 seconds (180 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ComponentIndustrial</li>
+                <li>Steel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>TableMachining</li>
+        </recipeUsers>
+
+        <products>
+            <IC_Protocolpackage>2</IC_Protocolpackage>
+        </products>
+    </RecipeDef>
+</Defs>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>RE_UmbralTorch</defName>
+    <label>Umbral Torch</label>
+    <description>A weapon equipped by Endfield operators to significantly boost their combat capabilities. A next-gen lightweight personal defense solution released by RAYTHEAN Industries. The sword has a special alloy blade and proved quite popular amongst certain "professionals".\n\n[Weapon Specification]: 6-Star Legendary Blade. Imbued with active Nature Arts modules. Attacks have a high 80% chance to trigger an unstoppable Corrosion resonance, ticking internal acid damage over 5 seconds while completely bypassing any physical armor ratings.</description>
+    <graphicData>
+      <texPath>Things/Weapons/UmbralTorch</texPath> 
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize> 
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="AKE.endfield.CompProperties_ArtsWeapon">
+        <appliesElement>Nature</appliesElement> 
+        <applyChance>0.4</applyChance> 
+      </li>
+    </comps>
+
+    <statBases>
+      <WorkToMake>60000</WorkToMake> 
+      <Mass>1.6</Mass>
+      <MarketValue>2500</MarketValue> 
+    </statBases>
+    
+    <costList>
+      <Steel>150</Steel>
+      <IC_Origocrust>20</IC_Origocrust>
+      <IC_HeavyCastDie>2</IC_HeavyCastDie>
+      <IC_ArmsINSPSet>1</IC_ArmsINSPSet>
+    </costList>
+    
+    <recipeMaker>
+      <researchPrerequisite>EV_AdvancedCloseCombat</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting> 
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>8</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities><li>Stab</li></capacities>
+        <power>20</power>
+        <cooldownTime>1.3</cooldownTime>
+        <armorPenetration>0.60</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities><li>Cut</li></capacities>
+        <power>24</power> 
+        <cooldownTime>1.1</cooldownTime>
+        <armorPenetration>0.50</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

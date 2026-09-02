@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>IC_CrystonFiber</defName>
+    <label>Cryston fiber</label>
+    <description>Cryston Fibers can undergo various processing steps to create a material for transmitting data and communication signals, as well as weaving ultra-durable protective apparel.</description>
+    <graphicData>
+      <texPath>Things/Resource/IC_CrystonFiber</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>40</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0.1</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <!-- Стати для захисту та ізоляції, коли з нього ШИЮТЬ одяг -->
+      <StuffPower_Armor_Sharp>1.1</StuffPower_Armor_Sharp>   <!-- Гарний захист від куль/мечiв (трохи краще за Devilstrand) -->
+      <StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>   <!-- Захист від ударів -->
+      <StuffPower_Armor_Heat>0.8</StuffPower_Armor_Heat>     <!--  захист від вогню -->
+      <StuffPower_Insulation_Cold>12</StuffPower_Insulation_Cold> <!-- Зберігає тепло -->
+      <StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>   <!-- Захищає від спеки -->
+    </statBases>
+
+    <!-- 5. Блок Властивостей Матеріалу (Щоб гра дозволила з нього шити) -->
+    <stuffProps>
+      <categories>
+        <li>Fabric</li> <!-- Вказує грі, що це ТКАННИЙ матеріал -->
+      </categories>
+      <commonality>0.10</commonality>
+      <color>(168,130,222)</color> 
+      <statFactors>
+        <Flammability>0.1</Flammability>
+        <MaxHitPoints>1.9</MaxHitPoints> 
+        <Beauty>2.0</Beauty>            
+      </statFactors>
+    </stuffProps>
+
+    <!-- 6. Категорія на Складі -->
+    <thingCategories>
+      <li>Textiles</li> <!-- Лежатиме у вкладці Тканини/Текстиль -->
+    </thingCategories>
+
+    <!-- 7. Зберігання та Торгівля -->
+    <stackLimit>75</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>true</healthAffectsPrice>
+
+    <tradeTags>
+      <li>IndustrialAdvanced</li>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

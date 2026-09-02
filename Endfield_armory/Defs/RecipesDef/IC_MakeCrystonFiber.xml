@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeCrystonFiber</defName>
+    <label>make cryston fiber</label>
+    <description>Process cryston powder into fine cryston fibers for data transmission and signaling.</description>
+    <jobString>Processing cryston fiber.</jobString>
+    <workAmount>2400</workAmount> <!-- 40 seconds (40 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>EF_refinery</soundWorking>
+
+    <researchPrerequisite>EM_AdvancedMaterials</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_CrystonPowder</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_CrystonPowder</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>AIC_RefiningUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_CrystonFiber>1</IC_CrystonFiber>
+    </products>
+  </RecipeDef>
+</Defs>

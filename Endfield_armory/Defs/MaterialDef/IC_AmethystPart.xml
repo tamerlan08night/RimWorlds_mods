@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>IC_AmethystPart</defName>
+    <label>Amethyst part</label>
+    <description>A complex electronic circuit component fused with an amethyst resonance element. An Amethyst part with a wide range of uses, essential for high-tech machinery.</description>
+
+    <graphicData>
+      <texPath>Things/Resource/IC_AmethystPart</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+
+    <!-- Характеристики -->
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>            
+      <MarketValue>13</MarketValue>               
+      <Mass>0.5</Mass>                          
+      <Flammability>0.3</Flammability>           
+      <DeteriorationRate>6.0</DeteriorationRate> 
+    </statBases>
+
+    <!-- 5. Категорія на Складі -->
+    <thingCategories>
+      <li>Manufactured</li> <!-- Лежатиме разом з компонентами та мікросхемами -->
+    </thingCategories>
+
+    <!-- 6. Зберігання та Логіка -->
+    <stackLimit>75</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <burnableByRecipe>false</burnableByRecipe>
+
+    <!-- 7. Торгівля -->
+    <tradeTags>
+      <li>IndustrialAdvanced</li>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

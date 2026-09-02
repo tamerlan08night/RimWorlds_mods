@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_Protocolpackage</defName>
+        <label>Protocol package</label>
+        <description>A set of utilities and protocols for transferring resources and data that is necessary to provide stable operation of machines and a resource distribution center. Requires long development and also requires good mental skills.</description>
+
+        <graphicData>
+            <texPath>Things/Resource/IC_Protocolpackage</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+
+        <!-- Характеристики -->
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>            <!-- Запас міцності при вибухах -->
+            <MarketValue>800</MarketValue>               <!-- Базова вартість -->
+            <Mass>5</Mass>                          <!-- Вага -->
+            <Flammability>0.5</Flammability>           <!-- Пластик/платівка може горіти -->
+            <DeteriorationRate>0.5</DeteriorationRate> <!-- Чутлива електроніка псується під дощем -->
+        </statBases>
+
+        <!-- 5. Категорія на Складі -->
+        <thingCategories>
+            <li>Manufactured</li> <!-- Лежатиме разом з компонентами та мікросхемами -->
+        </thingCategories>
+
+        <!-- 6. Зберігання та Логіка -->
+        <stackLimit>5</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <burnableByRecipe>false</burnableByRecipe>
+
+        <!-- 7. Торгівля -->
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
+</Defs>

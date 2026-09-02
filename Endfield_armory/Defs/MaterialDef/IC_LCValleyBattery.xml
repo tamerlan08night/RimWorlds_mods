@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_LCValleyBattery</defName>
+        <label>LC Valley Battery</label>
+        <description>Crushed amethyst powder obtained by processing raw crystals. Used in technology.</description>
+        <graphicData>
+            <texPath>Things/Resource/IC_LCValleyBattery</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <MarketValue>140</MarketValue>
+            <Mass>1</Mass>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <stackLimit>50</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <burnableByRecipe>false</burnableByRecipe>
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+        </tradeTags>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Combat Extended</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="RE_EdgeOfLightness"]/statBases</xpath>
+          <value>
+            <statBases>
+              <WorkToMake>25000</WorkToMake>
+              <MarketValue>2500</MarketValue>
+              <Mass>1.5</Mass>
+              <Bulk>4.5</Bulk>
+              <MeleeCritChance>0.25</MeleeCritChance> <MeleeParryChance>0.55</MeleeParryChance>
+            </statBases>
+          </value>
+        </li>
+        
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="RE_EdgeOfLightness"]/tools</xpath>
+          <value>
+            <tools>
+              <li Class="CombatExtended.ToolCE">
+                <label>point</label>
+                <capacities><li>Stab</li></capacities>
+                <power>19</power> <cooldownTime>1.15</cooldownTime> <armorPenetrationBlunt>3.5</armorPenetrationBlunt>
+                <armorPenetrationSharp>20</armorPenetrationSharp> <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+              </li>
+              <li Class="CombatExtended.ToolCE">
+                <label>edge</label>
+                <capacities><li>Cut</li></capacities>
+                <power>23</power> <cooldownTime>1.15</cooldownTime>
+                <armorPenetrationBlunt>4.5</armorPenetrationBlunt>
+                <armorPenetrationSharp>14</armorPenetrationSharp>
+                <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+              </li>
+            </tools>
+          </value>
+        </li>
+        
+      </operations>
+    </match>
+  </Operation>
+</Patch>

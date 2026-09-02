@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Combat Extended</li></mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="RE_SunderingSteel"]/tools</xpath>
+          <value>
+            <tools>
+              <li Class="CombatExtended.ToolCE">
+                <label>point</label>
+                <capacities><li>Stab</li></capacities>
+                <power>19</power> <cooldownTime>1.4</cooldownTime>
+                <armorPenetrationSharp>20</armorPenetrationSharp> <armorPenetrationBlunt>5.0</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+              </li>
+              <li Class="CombatExtended.ToolCE">
+                <label>edge</label>
+                <capacities><li>Cut</li></capacities>
+                <power>23</power> <cooldownTime>1.4</cooldownTime>
+                <armorPenetrationSharp>14</armorPenetrationSharp> 
+                <armorPenetrationBlunt>8.5</armorPenetrationBlunt> <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+              </li>
+            </tools>
+          </value>
+        </li>
+        
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="RE_SunderingSteel"]/statBases</xpath>
+          <value>
+            <statBases>
+              <WorkToMake>45000</WorkToMake>
+              <Mass>2.5</Mass>
+              <MarketValue>1200</MarketValue>
+              <Bulk>4</Bulk>
+              <MeleeCritChance>0.25</MeleeCritChance> <MeleeParryChance>0.40</MeleeParryChance>
+            </statBases>
+          </value>
+        </li>
+        
+      </operations>
+    </match>
+  </Operation>
+</Patch>

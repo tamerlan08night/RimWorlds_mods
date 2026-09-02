@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>IC_AIC_PackingUnit</defName>
+        <label>AIC packing unit</label>
+        <description>A facility for packaging certain power components.
+            All sorts of batteries had been made in various regions of Talos-II. When the war finally ended, humanity gradually established unified standards and specifications for battery production.</description>
+
+        <!-- C# Клас і Тікер -->
+        <thingClass>AKE.endfield.Building_ICFactoryBase</thingClass>
+        <tickerType>Normal</tickerType>
+
+        <!-- Графіка та розміри -->
+        <graphicData>
+            <texPath>Things/Building/Production/IC_PackingUnit</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(6,4)</drawSize>
+        </graphicData>
+        <size>(6,4)</size>
+        <passability>Impassable</passability>
+        <fillPercent>1.0</fillPercent>
+
+        <!-- Можливість переносити та будувати -->
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsProduction</li>
+        </thingCategories>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>Production</designationCategory>
+        <constructEffect>ConstructMetal</constructEffect>
+
+        <!-- Характеристики -->
+        <statBases>
+            <MaxHitPoints>800</MaxHitPoints>
+            <WorkToBuild>100000</WorkToBuild>
+            <Mass>360</Mass>
+            <Flammability>0.2</Flammability>
+        </statBases>
+
+        <!-- Вартість побудови -->
+        <costList>
+            <IC_Protocolpackage>1</IC_Protocolpackage>
+            <IC_Automationpackage>1</IC_Automationpackage>
+            <IC_Mechanicalpackage>1</IC_Mechanicalpackage>
+            <Steel>300</Steel>
+        </costList>
+
+        <researchPrerequisites>
+            <li>EF_ImprovedFactories</li>
+        </researchPrerequisites>
+
+        <!-- Компоненти (Енергія) -->
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>600</basePowerConsumption>
+            </li>
+        </comps>
+
+        <!-- Інтерфейс вкладки рецептів -->
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+
+        <!-- Порожній список рецептів для підтримки патчів -->
+        <recipes />
+
+        <!-- Налаштування будівлі -->
+        <building>
+            <isSittable>false</isSittable>
+            <workTableRoomRole>Workshop</workTableRoomRole>
+            <buildingTags>
+                <li>Production</li>
+            </buildingTags>
+        </building>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_EndfieldSteel</defName>
+        <label>Steel</label>
+        <description>Steel manufactured by Endfield Industries has been subject to multiple processing steps. It has been included in the list of Grade 2 Reference Materials in the Talos-II Blight Resistance Standards of Industrial Metals.</description>
+        <graphicData>
+            <texPath>Things/Resource/IC_EndfieldSteel</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.9</MarketValue>
+            <Mass>0.5</Mass>
+            <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>0.60</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>1</SharpDamageMultiplier>
+            <BluntDamageMultiplier>1</BluntDamageMultiplier>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <slagDef>ChunkSlagSteel</slagDef>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <commonality>1.00</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <isAirtight>true</isAirtight>
+            <color>(105,105,105)</color>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <MaxHitPoints>1</MaxHitPoints>
+                <Beauty>1</Beauty>
+                <Flammability>0.4</Flammability>
+            </statFactors>
+            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+    </ThingDef>
+</Defs>

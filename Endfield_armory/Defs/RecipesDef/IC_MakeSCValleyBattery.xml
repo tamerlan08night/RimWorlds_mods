@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeSCValleyBattery</defName>
+        <label>Create SC Valley Battery.</label>
+        <description>Pack electronic components and origin to create a battery for a thermite bank.</description>
+        <jobString>Make SC battery.</jobString>
+        <workAmount>3600</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_packaging</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_FerriumPart</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_OriginiumPowder</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IC_OriginiumPowder</li>
+                <li>IC_FerriumPart</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_PackingUnit</li>
+        </recipeUsers>
+
+        <researchPrerequisite>EF_SCValeyBatteryReserch</researchPrerequisite>
+
+        <products>
+            <IC_SCValleyBattery>1</IC_SCValleyBattery>
+        </products>
+
+    </RecipeDef>
+</Defs>

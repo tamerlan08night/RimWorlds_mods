@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef ParentName="Arknights_Arts_BaseHediff">
+    <defName>Arts_Electric</defName>
+    <label>electric resonance</label>
+    <description>Resonance of the Electric Element. Accumulation of static charge disorients the nervous system. At stage 4, releases a chain lightning bolt that strikes nearby targets.</description>
+    <hediffClass>AKE.endfield.Hediff_ArtsElement</hediffClass>
+    <stages>
+      <li>
+        <label>static buildup</label>
+        <capMods>
+          <li><capacity>Consciousness</capacity><postFactor>0.95</postFactor></li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.41</minSeverity>
+        <label>sparking</label>
+        <capMods>
+          <li><capacity>Consciousness</capacity><postFactor>0.85</postFactor></li>
+          <li><capacity>Moving</capacity><postFactor>0.9</postFactor></li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.76</minSeverity>
+        <label>short-circuiting</label>
+        <capMods>
+          <li><capacity>Consciousness</capacity><postFactor>0.7</postFactor></li>
+          <li><capacity>Moving</capacity><postFactor>0.7</postFactor></li>
+          <li><capacity>Manipulation</capacity><postFactor>0.8</postFactor></li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>DISCHARGED</label>
+        <capMods>
+          <li><capacity>Consciousness</capacity><setMax>0.1</setMax></li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

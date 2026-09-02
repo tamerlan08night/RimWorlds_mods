@@ -1,0 +1,9 @@
+<Defs>
+    <DamageDef ParentName="Bomb">
+        <defName>IC_HEGrenadeBomb</defName>
+        <label>HE grenade blast</label>
+        <buildingDamageFactor>0.8</buildingDamageFactor>
+        <buildingDamageFactorPassable>0.8</buildingDamageFactorPassable>
+        <buildingDamageFactorImpassable>0.8</buildingDamageFactorImpassable>
+    </DamageDef>
+</Defs>

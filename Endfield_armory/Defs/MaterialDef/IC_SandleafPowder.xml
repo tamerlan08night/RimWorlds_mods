@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_SandleafPowder</defName>
+        <label>Sandleaf powder</label>
+        <description>Fine powder crushed from processed sandleaf leaves. Used as a component in various production chains.</description>
+       
+        <graphicData>
+            <texPath>Things/Resource/IC_SandleafPowder</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <DeteriorationRate>5</DeteriorationRate>
+            <MarketValue>0.2</MarketValue>
+            <Mass>0.1</Mass>
+            <Flammability>0.3</Flammability>
+        </statBases>
+        <soundInteract>Grain_Drop</soundInteract> <!-- Звуки сипучого матеріалу -->
+        <soundDrop>Grain_Drop</soundDrop>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <stackLimit>150</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <burnableByRecipe>false</burnableByRecipe>
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+        </tradeTags>
+    </ThingDef>
+</Defs>

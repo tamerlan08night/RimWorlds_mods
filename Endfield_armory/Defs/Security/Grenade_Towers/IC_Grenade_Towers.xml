@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- НАПІВ-ФУГАСНА ТУРЕЛЬ (Semi-HE) -->
+
+    <!-- Снаряд Semi-HE -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_IC_SemiHEGrenade</defName>
+        <label>semi-HE grenade</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/Rocket_Swarm</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.1</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>55</damageAmountBase>
+            <armorPenetrationBase>0.95</armorPenetrationBase>
+            <explosionRadius>1.9</explosionRadius>
+            <speed>70</speed>
+            <soundExplode>Explosion_Bomb</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Зброя Semi-HE -->
+    <ThingDef ParentName="BaseWeaponTurret">
+        <defName>Gun_IC_EndfieldSemiHETurret</defName>
+        <label>Endfield semi-HE grenade launcher</label>
+        <graphicData>
+            <texPath>Things/Building/Security/Granade_Towers/Grenade_Tower</texPath> 
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <AccuracyTouch>0.25</AccuracyTouch>
+            <AccuracyShort>0.35</AccuracyShort>
+            <AccuracyMedium>0.35</AccuracyMedium>
+            <AccuracyLong>0.25</AccuracyLong>
+            <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+            <Mass>70</Mass>
+        </statBases>
+        <verbs>
+            <li Class="VerbProperties">
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_IC_SemiHEGrenade</defaultProjectile>
+                <range>60</range>
+                <forcedMissRadius>0.2</forcedMissRadius>
+                <warmupTime>1</warmupTime>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <!-- Будівля Semi-HE -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>IC_EndfieldSemiHETurret</defName>
+        <label>Grenade Tower</label>
+        <uiIconPath>Things/Building/Security/Granade_Towers/UI_Grenade</uiIconPath> <!-- Іконка в меню будівництва -->
+        <description>Mode of Attack: Launches grenades in a ballistic trajectory. Grenades have low explosive power, but have good penetration power upon impact.
+            A launcher of compressed Originium grenades. Designs are based on small field guns used during the Aggeloi War.</description>
+        <thingClass>Building_TurretGun</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <texPath>Things/Building/Security/Gun_Tower/Base</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.75</fillPercent>
+        <size>(2,2)</size>
+        <statBases>
+            <MaxHitPoints>280</MaxHitPoints>
+            <WorkToBuild>18000</WorkToBuild>
+            <Mass>45</Mass>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <tickerType>Normal</tickerType>
+        <costList>
+            <Steel>250</Steel>
+            <IC_Origocrust>30</IC_Origocrust>
+            <IC_AmethystPart>5</IC_AmethystPart>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>300</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+        </comps>
+        <designationCategory>Security</designationCategory>
+        <hasTooltip>true</hasTooltip>
+        <building>
+            <ai_combatDangerous>true</ai_combatDangerous>
+            <turretGunDef>Gun_IC_EndfieldSemiHETurret</turretGunDef>
+            <turretTopDrawSize>2</turretTopDrawSize>
+            <turretBurstCooldownTime>3.5</turretBurstCooldownTime>
+        </building>
+        <researchPrerequisites>
+            <li>EV_Baseturetts</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+
+    <!-- ПОВНІСТЮ ФУГАСНА ТУРЕЛЬ (Pure HE) -->
+
+    <!-- Снаряд Pure HE -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_IC_PureHEGrenade</defName>
+        <label>HE grenade</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/Rocket_Swarm</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.3</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>80</damageAmountBase>
+            <armorPenetrationBase>0.45</armorPenetrationBase>
+            <explosionRadius>3.2</explosionRadius>
+            <speed>38</speed>
+            <soundExplode>Explosion_Rocket</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Зброя Pure HE -->
+    <ThingDef ParentName="BaseWeaponTurret">
+        <defName>Gun_IC_EndfieldPureHETurret</defName>
+        <label>Endfield HE grenade launcher</label>
+        <graphicData>
+            <texPath>Things/Building/Security/Granade_Towers/HE_Grenade_Tower</texPath> 
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <AccuracyTouch>0.50</AccuracyTouch>
+            <AccuracyShort>0.65</AccuracyShort>
+            <AccuracyMedium>0.60</AccuracyMedium>
+            <AccuracyLong>0.45</AccuracyLong>
+            <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+            <Mass>70</Mass>
+        </statBases>
+        <verbs>
+            <li Class="VerbProperties">
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_IC_PureHEGrenade</defaultProjectile>
+                <minRange>7</minRange>
+                <range>60</range>
+                <forcedMissRadius>1.0</forcedMissRadius>
+                <warmupTime>1</warmupTime>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>15</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <!-- Будівля Pure HE -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>IC_EndfieldPureHETurret</defName>
+        <label>HE Grenade Tower</label>
+        <uiIconPath>Things/Building/Security/Granade_Towers/UI_Grenade_HE</uiIconPath> <!-- Іконка в меню будівництва -->
+        <description>Mode of Attack: Attacks enemies by launching Mk Ⅱ grenades along a ballistic trajectory that detonate above ground near enemies.
+            A launcher of compressed high explosive (HE) Originium grenades. This facility deals more devastating area damage compared to its standard counterpart.</description>
+        <thingClass>Building_TurretGun</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <texPath>Things/Building/Security/Gun_Tower/Base</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.75</fillPercent>
+        <size>(2,2)</size>
+        <statBases>
+            <MaxHitPoints>280</MaxHitPoints>
+            <WorkToBuild>18000</WorkToBuild>
+            <Mass>45</Mass>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <tickerType>Normal</tickerType>
+        <costList>
+            <Steel>250</Steel>
+            <IC_SteelPart>10</IC_SteelPart>
+            <IC_Origocrust>35</IC_Origocrust>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>350</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+        </comps>
+        <designationCategory>Security</designationCategory>
+        <hasTooltip>true</hasTooltip>
+        <building>
+            <ai_combatDangerous>true</ai_combatDangerous>
+            <turretGunDef>Gun_IC_EndfieldPureHETurret</turretGunDef>
+            <turretTopDrawSize>2</turretTopDrawSize>
+            <turretBurstCooldownTime>4.0</turretBurstCooldownTime>
+        </building>
+        <researchPrerequisites>
+            <li>EV_ImprovedProtectionSystems</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+</Defs>

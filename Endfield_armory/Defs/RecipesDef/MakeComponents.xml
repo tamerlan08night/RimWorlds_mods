@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Компоненти -->
+    <RecipeDef>
+        <defName>IC_MakeIndustialComponent</defName>
+        <label>Craft components</label>
+        <description>Make components</description>
+        <jobString>Crafting components</jobString>
+        <workAmount>1800</workAmount> <!-- 30 seconds (40 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_gearing</soundWorking>
+
+        <researchPrerequisite>EM_AdvancedMaterials</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_FittingUnit</li>
+        </recipeUsers>
+
+        <products>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </products>
+    </RecipeDef>
+    
+    <!-- Космічні компоненти -->
+    <RecipeDef>
+        <defName>IC_MakeComponentSpacer</defName>
+        <label>Craft space components</label>
+        <description>Make space components</description>
+        <jobString>Crafting space components</jobString>
+        <workAmount>1800</workAmount> <!-- 30 seconds (40 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_gearing</soundWorking>
+
+        <researchPrerequisite>Fabrication</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ComponentIndustrial</li>
+                <li>Plasteel</li>
+                <li>Gold</li>
+                <li>Steel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_FittingUnit</li>
+        </recipeUsers>
+
+        <products>
+            <ComponentSpacer>1</ComponentSpacer>
+        </products>
+    </RecipeDef>
+</Defs>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeDenseOrigocrustPowder</defName>
+    <label>make dense origocrust powder</label>
+    <description>Grind origocrust powder and sandleaf powder into a high-density powdered block using Techno-Protocol techniques.</description>
+    <jobString>Grinding dense origocrust powder.</jobString>
+    <workAmount>1800</workAmount> <!-- 30 seconds (30 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>EF_griding</soundWorking>
+
+    <researchPrerequisite>EM_AdvancedMaterials</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_SandleafPowder</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_OrigocrustPowder</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_SandleafPowder</li>
+        <li>IC_OrigocrustPowder</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>IC_AIC_GrindingUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_DenseOrigocrustPowder>1</IC_DenseOrigocrustPowder>
+    </products>
+  </RecipeDef>
+</Defs>

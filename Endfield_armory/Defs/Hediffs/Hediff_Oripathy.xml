@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>OE_Oripathy</defName>
+    <label>oripathy</label>
+    <labelNoun>oripathy</labelNoun>
+    <description>Originium particles have entered the bloodstream and begun crystallising in the body. The condition is incurable, but its progression can be temporarily halted by inhibitors. Without treatment it is invariably fatal within fifteen days.</description>
+
+    <hediffClass>AKE.endfield.Hediff_Oripathy</hediffClass>
+
+    <isBad>true</isBad>
+    <makesSickThought>true</makesSickThought>
+    <tendable>false</tendable>
+    <defaultLabelColor>(0.45, 0.05, 0.75)</defaultLabelColor>
+
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.0667</severityPerDay>
+      </li>
+      <li Class="AKE.endfield.HediffCompProperties_OripathyProgression">
+        <stage1MinSeverity>0.000</stage1MinSeverity>
+        <stage2MinSeverity>0.267</stage2MinSeverity>
+        <stage3MinSeverity>0.467</stage3MinSeverity>
+        <stage4MinSeverity>0.667</stage4MinSeverity>
+        <stage5MinSeverity>0.867</stage5MinSeverity>
+
+        <organDamageHediffDef>OE_OripathyOrganCrystallisation</organDamageHediffDef>
+        <organDamageCount>2</organDamageCount>
+
+        <resourceDropDef>OE_RawOriginium</resourceDropDef>
+        <resourceDropAmount>2</resourceDropAmount>
+        <resourceDropIntervalTicks>60000</resourceDropIntervalTicks>
+
+        <stage5FatalDurationTicks>120000</stage5FatalDurationTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>mild contamination</label>
+        <minSeverity>0.000</minSeverity>
+        <becomeVisible>true</becomeVisible>
+        <capMods>
+          <li><capacity>Moving</capacity>        <offset>-0.05</offset></li>
+          <li><capacity>Manipulation</capacity>  <offset>-0.05</offset></li>
+          <li><capacity>Talking</capacity>        <offset>-0.05</offset></li>
+          <li><capacity>Eating</capacity>         <offset>-0.05</offset></li>
+          <li><capacity>Sight</capacity>          <offset>-0.05</offset></li>
+        </capMods>
+      </li>
+
+      <li>
+        <label>moderate contamination</label>
+        <minSeverity>0.267</minSeverity>
+        <capMods>
+          <li><capacity>Moving</capacity>        <offset>-0.15</offset></li>
+          <li><capacity>Manipulation</capacity>  <offset>-0.15</offset></li>
+          <li><capacity>Talking</capacity>        <offset>-0.10</offset></li>
+          <li><capacity>Eating</capacity>         <offset>-0.10</offset></li>
+          <li><capacity>Sight</capacity>          <offset>-0.15</offset></li>
+          <li><capacity>Consciousness</capacity>  <offset>-0.05</offset></li>
+        </capMods>
+        <painOffset>0.05</painOffset>
+      </li>
+
+      <li>
+        <label>crystallisation</label>
+        <minSeverity>0.467</minSeverity>
+        <capMods>
+          <li><capacity>Moving</capacity>        <offset>-0.30</offset></li>
+          <li><capacity>Manipulation</capacity>  <offset>-0.30</offset></li>
+          <li><capacity>Talking</capacity>        <offset>-0.20</offset></li>
+          <li><capacity>Eating</capacity>         <offset>-0.20</offset></li>
+          <li><capacity>Sight</capacity>          <offset>-0.25</offset></li>
+          <li><capacity>Consciousness</capacity>  <offset>-0.10</offset></li>
+        </capMods>
+        <painOffset>0.15</painOffset>
+      </li>
+
+      <li>
+        <label>advanced crystallisation</label>
+        <minSeverity>0.667</minSeverity>
+        <capMods>
+          <li><capacity>Moving</capacity>        <offset>-0.50</offset></li>
+          <li><capacity>Manipulation</capacity>  <offset>-0.50</offset></li>
+          <li><capacity>Talking</capacity>        <offset>-0.40</offset></li>
+          <li><capacity>Eating</capacity>         <offset>-0.35</offset></li>
+          <li><capacity>Sight</capacity>          <offset>-0.45</offset></li>
+          <li><capacity>Consciousness</capacity>  <offset>-0.20</offset></li>
+          <li><capacity>BloodFiltration</capacity><offset>-0.30</offset></li>
+          <li><capacity>BloodPumping</capacity>   <offset>-0.20</offset></li>
+        </capMods>
+        <painOffset>0.35</painOffset>
+      </li>
+
+      <li>
+        <label>terminal</label>
+        <minSeverity>0.867</minSeverity>
+        <capMods>
+          <li><capacity>Moving</capacity>        <offset>-0.80</offset></li>
+          <li><capacity>Manipulation</capacity>  <offset>-0.80</offset></li>
+          <li><capacity>Talking</capacity>        <offset>-0.70</offset></li>
+          <li><capacity>Eating</capacity>         <offset>-0.60</offset></li>
+          <li><capacity>Sight</capacity>          <offset>-0.70</offset></li>
+          <li><capacity>Consciousness</capacity>  <offset>-0.40</offset></li>
+          <li><capacity>BloodFiltration</capacity><offset>-0.60</offset></li>
+          <li><capacity>BloodPumping</capacity>   <offset>-0.50</offset></li>
+        </capMods>
+        <painOffset>0.70</painOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>OE_OripathyOrganCrystallisation</defName>
+    <label>originium crystallisation</label>
+    <description>Originium crystals have formed inside this organ, impairing its function.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <defaultLabelColor>(0.45, 0.05, 0.75)</defaultLabelColor>
+    <stages>
+      <li>
+        <capMods>
+          <li><capacity>BloodFiltration</capacity><offset>-0.10</offset></li>
+          <li><capacity>BloodPumping</capacity>   <offset>-0.10</offset></li>
+          <li><capacity>Breathing</capacity>      <offset>-0.10</offset></li>
+          <li><capacity>Metabolism</capacity>     <offset>-0.10</offset></li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>OE_OripathyStabilized</defName>
+    <label>oripathy inhibition</label>
+    <labelNoun>oripathy inhibition</labelNoun>
+    <description>A pharmacological treatment that suppresses Originium activity, temporarily halting the progression of oripathy. While active, the disease does not worsen.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.4, 0.8, 0.9)</defaultLabelColor>
+    <comps>
+      <!-- Цей компонент автоматично додає таймер, який бачить гравець -->
+      <li Class="HediffCompProperties_Disappears">
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

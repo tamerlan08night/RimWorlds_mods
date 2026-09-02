@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef ParentName="Arknights_Arts_BaseHediff">
+    <defName>Arts_Cryo</defName>
+    <label>cryo resonance</label>
+    <description>Cryo Resonance Effect. Accumulation of cold slows the target, and at maximum stage completely freezes it. The next hit on the frozen target will deal massive damage (Shatter), but will remove the effect.</description>
+    <hediffClass>AKE.endfield.Hediff_ArtsElement</hediffClass> <stages>
+      <li>
+        <label>chilled</label>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.9</postFactor>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.41</minSeverity>
+        <label>frostbound</label>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.7</postFactor>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.9</postFactor>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.76</minSeverity>
+        <label>deep freeze</label>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.4</postFactor>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.7</postFactor>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>FROZEN</label>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.01</setMax> </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

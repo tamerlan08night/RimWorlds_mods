@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <FleckDef>
+        <defName>Arts_CustomLightningBolt</defName> 
+        <graphicData>
+            <texPath>Things/Effects/Lightning</texPath>
+            <graphicClass>Graphic_Fleck</graphicClass>
+            <shaderType>Additive</shaderType>
+            <drawSize>(1, 4)</drawSize>
+        </graphicData>
+        <altitudeLayer>Weather</altitudeLayer>
+        <solidTime>0.08</solidTime>
+        <fadeOutTime>0.12</fadeOutTime>
+    </FleckDef>
+</Defs>

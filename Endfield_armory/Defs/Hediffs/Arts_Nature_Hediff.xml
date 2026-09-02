@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef ParentName="Arknights_Arts_BaseHediff">
+    <defName>Arts_Nature</defName> 
+    <label>nature resonance</label>
+    <description>Corrosion effect. Organic and inorganic compounds are broken down by active enzymes. In stage 4, causes decay (corrosion) for 5 seconds.</description>
+    <hediffClass>AKE.endfield.Hediff_ArtsElement</hediffClass>
+    <stages>
+      <li>
+        <label>corroding</label>
+        <statOffsets>
+          <IncomingDamageFactor>0.05</IncomingDamageFactor> </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.41</minSeverity>
+        <label>deep erosion</label>
+        <statOffsets>
+          <IncomingDamageFactor>0.10</IncomingDamageFactor>
+          <ArmorRating_Blunt>-0.05</ArmorRating_Blunt>
+          <ArmorRating_Sharp>-0.05</ArmorRating_Sharp> </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.76</minSeverity>
+        <label>structural decay</label>
+        <statOffsets>
+          <IncomingDamageFactor>0.15</IncomingDamageFactor>
+          <ArmorRating_Blunt>-0.10</ArmorRating_Blunt>
+          <ArmorRating_Sharp>-0.10</ArmorRating_Sharp>
+        </statOffsets>
+        <capMods>
+          <li><capacity>BloodPumping</capacity><postFactor>0.9</postFactor></li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>TOTAL DECAY</label>
+        <statOffsets>
+          <IncomingDamageFactor>0.20</IncomingDamageFactor>
+          <ArmorRating_Blunt>-0.15</ArmorRating_Blunt>
+          <ArmorRating_Sharp>-0.15</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

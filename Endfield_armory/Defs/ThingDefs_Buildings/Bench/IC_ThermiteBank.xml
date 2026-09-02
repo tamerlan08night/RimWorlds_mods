@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>IF_ThermiteBank</defName>
+        <label>Thermite bank</label>
+        <description>A thermite bank that generates energy by burning Valley batteries. Use the interface button to specify which battery type should be consumed. Automatically pulls from nearby AIC Hubs (18-cell radius) or can be fueled manually by colonists.</description>
+
+        <thingClass>AKE.endfield.Building_ThermiteBank</thingClass>
+        <category>Building</category>
+        <graphicData>
+            <texPath>Things/Building/Production/IC_ThermiteBank</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+
+        <passability>Impassable</passability> <!-- Повертаємо справжню непрохідність -->
+        <fillPercent>1.0</fillPercent>       <!-- Додаємо висоту/покриття (повний блок для куль і зору) -->
+
+        <!-- КРИТИЧНО ВАЖЛИВО ДЛЯ РОБОТИ C# -->
+        <tickerType>Normal</tickerType>
+
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsProduction</li>
+        </thingCategories>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>Power</designationCategory>
+        <constructEffect>ConstructMetal</constructEffect>
+
+        <statBases>
+            <MaxHitPoints>300</MaxHitPoints>
+            <WorkToBuild>2500</WorkToBuild>
+            <Flammability>0.5</Flammability>
+            <Mass>35</Mass>
+        </statBases>
+        <size>(2,2)</size>
+        <costList>
+            <Steel>150</Steel>
+            <IC_Automationpackage>1</IC_Automationpackage>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+
+        <comps>
+            <!-- Компонент живлення. Використовуємо CompPowerPlant для генераторів -->
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerPlant</compClass>
+                <basePowerConsumption>0</basePowerConsumption>
+                <transmitsPower>true</transmitsPower>
+            </li>
+
+            <li Class="CompProperties_Refuelable">
+                <fuelConsumptionRate>0.066667</fuelConsumptionRate>
+                <fuelCapacity>1.0</fuelCapacity>
+                <!-- Видалено тег initialFuelPct, який викликав XML error -->
+                <fuelFilter>
+                    <thingDefs>
+                        <li>IC_LCValleyBattery</li>
+                        <li>IC_SCValleyBattery</li>
+                        <li>IC_HCValleyBattery</li>
+                    </thingDefs>
+                </fuelFilter>
+                <showFuelGizmo>true</showFuelGizmo>
+                <autoRefuelPercent>1.0</autoRefuelPercent>
+                <destroyOnNoFuel>false</destroyOnNoFuel>
+            </li>
+        </comps>
+
+        <researchPrerequisites>
+            <li>EF_ThermiteEnergy</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+</Defs>

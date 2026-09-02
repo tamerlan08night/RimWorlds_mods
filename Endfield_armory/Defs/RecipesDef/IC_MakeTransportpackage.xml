@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeTransportpackage</defName>
+        <label>Craft transport package</label>
+        <description>A set of transportation and ports for transferring resources over a distance directly to a distribution center. Very useful for drills and is a necessary component for their construction.</description>
+        <jobString>Crafting automation package</jobString>
+        <workAmount>10800</workAmount> <!-- 180 seconds (180 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>160</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ComponentIndustrial</li>
+                <li>Steel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>TableMachining</li>
+        </recipeUsers>
+
+        <products>
+            <IC_Transportpackage>1</IC_Transportpackage>
+        </products>
+    </RecipeDef>
+</Defs>

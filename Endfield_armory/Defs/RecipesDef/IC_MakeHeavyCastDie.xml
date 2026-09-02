@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeHeavyCastDie</defName>
+        <label>Craft heavy cast die</label>
+        <description>A heavy casting die made using rare materials. Techno-Protocol activation lets this die enhance general material strengths in weapons.</description>
+        <jobString>Crafting arms INSP Set</jobString>
+        <workAmount>7200</workAmount> <!-- 120 seconds (90 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_refinery</soundWorking>
+
+        <researchPrerequisite>EM_AdvancedMaterials</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                        <li>IC_EndfieldSteel</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_FerriumPowder</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_OriginiumPowder</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_DenseOrigocrustPowder</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IC_DenseOrigocrustPowder</li>
+                <li>IC_OriginiumPowder</li>
+                <li>Steel</li>
+                <li>IC_FerriumPowder</li>
+                <li>IC_EndfieldSteel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>AIC_RefiningUnit</li>
+        </recipeUsers>
+
+        <products>
+            <IC_HeavyCastDie>1</IC_HeavyCastDie>
+        </products>
+    </RecipeDef>
+</Defs>

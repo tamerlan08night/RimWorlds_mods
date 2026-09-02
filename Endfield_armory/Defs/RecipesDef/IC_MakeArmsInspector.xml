@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeArmsInspector</defName>
+        <label>Craft arms inspector</label>
+        <description>A single-use toolset with AIC technology. Provides automated in-depth inspection of the entire weapon structure. Also repairs internal material damage and significantly enhances weapon performance.</description>
+        <jobString>Crafting arms inspector</jobString>
+        <workAmount>1800</workAmount> <!-- 30 seconds (40 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_gearing</soundWorking>
+
+        <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_AmethystPart</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_Origocrust</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IC_AmethystPart</li>
+                <li>IC_Origocrust</li>
+                <li>Steel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_GearingUnit</li>
+        </recipeUsers>
+
+        <products>
+            <IC_ArmsInspector>1</IC_ArmsInspector>
+        </products>
+    </RecipeDef>
+</Defs>

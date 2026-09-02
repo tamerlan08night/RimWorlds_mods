@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeSandleafPowder</defName>
+    <label>crush sandleaf</label>
+    <description>Crush raw sandleaf into fine sandleaf powder.</description>
+    <jobString>Crushing sandleaf.</jobString>
+    <workAmount>300</workAmount> <!-- 5 seconds (5 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>EF_crasher</soundWorking>
+
+    <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_RawSandleaf</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_RawSandleaf</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>IC_AIC_ShreddingUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_SandleafPowder>1</IC_SandleafPowder>
+    </products>
+  </RecipeDef>
+</Defs>

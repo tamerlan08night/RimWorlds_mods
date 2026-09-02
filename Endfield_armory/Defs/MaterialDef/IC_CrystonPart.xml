@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_CrystonPart</defName>
+        <label>Cryston part</label>
+        <description>A Cryston Part with a wide range of uses.</description>
+
+        <graphicData>
+            <texPath>Things/Resource/IC_CrystonPart</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+
+        <!-- Характеристики -->
+        <statBases>
+            <MaxHitPoints>70</MaxHitPoints>            <!-- Запас міцності при вибухах -->
+            <MarketValue>55</MarketValue>               <!-- Базова вартість -->
+            <Mass>0.5</Mass>                          <!-- Вага -->
+            <Flammability>0.3</Flammability>           <!-- Пластик/платівка може горіти -->
+            <DeteriorationRate>6.0</DeteriorationRate> <!-- Чутлива електроніка псується під дощем -->
+        </statBases>
+
+        <!-- 5. Категорія на Складі -->
+        <thingCategories>
+            <li>Manufactured</li> <!-- Лежатиме разом з компонентами та мікросхемами -->
+        </thingCategories>
+
+        <!-- 6. Зберігання та Логіка -->
+        <stackLimit>75</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <burnableByRecipe>false</burnableByRecipe>
+
+        <!-- 7. Торгівля -->
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>RE_LupineScarlet</defName>
+    <label>Lupine Scarlet</label>
+    <description>A popular sword produced by RAYTHEAN Industries. Equipped by Endfield operators to significantly boost their combat capabilities. Plenty have been smuggled to regions outside the Civilization Band as they proved to be quite the catch amongst the Landbreakers, who often furnish them with specialized modifications.\n\n[Weapon Specification]: Base ATK +16%. Requires Melee level 13+ to unleash its hyper-aggressive potential via advanced scaling (+7 Base, x2.0 DMG). Attacking ignited targets sharpens the wielder's senses, accumulating stacks of Scarlet Instinct. At 16 stacks, triggers Lupine Apex phase for 20 seconds, granting massive mobility and striking speed.</description>
+    
+    <graphicData>
+      <texPath>Things/Weapons/LupineScarlet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.15</drawSize>
+    </graphicData>
+    
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable> 
+    <burnableByRecipe>true</burnableByRecipe>
+    
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>1.5</Mass>
+      <MarketValue>2000</MarketValue>
+    </statBases>
+
+    <equippedStatOffsets>
+      <MeleeHitChance>0.4</MeleeHitChance>
+    </equippedStatOffsets>
+
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="AKE.endfield.CompProperties_WeaponSkillScaling">
+        <scalings>
+          <li>
+            <skill>Melee</skill>
+            <minSkill>13</minSkill>
+            <damageMultiplier>2.0</damageMultiplier>
+
+          </li>
+        </scalings>
+      </li>
+    </comps>
+
+    <costList>
+      <Steel>120</Steel>
+      <IC_Origocrust>2</IC_Origocrust>
+      <IC_HeavyCastDie>3</IC_HeavyCastDie>
+      <IC_ArmsINSPKit>2</IC_ArmsINSPKit>
+    </costList>
+
+    <recipeMaker>
+      <researchPrerequisite>EV_AdvancedCloseCombat</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities><li>Stab</li></capacities>
+        <power>26</power>
+        <cooldownTime>1.03</cooldownTime>
+        <armorPenetration>0.55</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities><li>Cut</li></capacities>
+        <power>32</power>
+        <cooldownTime>0.8</cooldownTime>
+        <armorPenetration>0.45</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

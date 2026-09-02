@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeOrigocrust</defName>
+    <label>process origocrust</label>
+    <description>Process raw originium into a stable origocrust fragment.</description>
+    <jobString>Processing origocrust.</jobString>
+    <workAmount>600</workAmount> <!-- 10 seconds (10 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>EF_refinery</soundWorking>
+
+    <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>OE_RawOriginium</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+            <li>OE_RawOriginium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>AIC_RefiningUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_Origocrust>1</IC_Origocrust>
+    </products>
+  </RecipeDef>
+</Defs>

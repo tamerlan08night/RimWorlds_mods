@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>IC_DenseOriginiumPowder</defName>
+    <label>Dense originium powder</label>
+    <description>A highly compressed, dense mixture of originium and sandleaf powders, formatted into a solid compound block for advanced synthesis. The UWST Originium cultivation project initially attempted "powder seeding" but the resulting crystal clusters would often lose their activity quickly.</description>
+    
+    <graphicData>
+      <texPath>Things/Resource/IC_DenseOriginiumPowder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+
+    <!-- 4. Характеристики -->
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>            <!-- Порошковий блок менш міцний за цілісний кристал -->
+      <MarketValue>20</MarketValue>               <!-- Вартість -->
+      <Mass>0.8</Mass>                          <!-- Вага -->
+      <Flammability>0.0</Flammability>           
+    </statBases>
+    
+    <thingCategories>
+      <li>Manufactured</li> 
+    </thingCategories>
+
+    <!-- 6. Зберігання та Логіка -->
+    <stackLimit>75</stackLimit>            
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <burnableByRecipe>false</burnableByRecipe>
+    
+    <tradeTags>
+      <li>IndustrialAdvanced</li>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

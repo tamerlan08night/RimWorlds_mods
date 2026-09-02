@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>RE_SunderingSteel</defName>
+    <label>Sundering Steel</label>
+    <description>A weapon equipped by Endfield operators to significantly boost their combat capabilities. One of the elite weaponry manufactured by Endfield for their operators. The sword features a seamless grip-and-guard hilt and stress-triggered energy storage mechanisms to enhance its damage potential.\n\n[Weapon Specification]: 5-Star Elite Weapon. Imbued with advanced Physical Arts. Stress-triggered core guarantees 100% chance to inflict armor-tearing physical resonance upon target hit, enhancing consecutive heavy strikes.</description>
+    <graphicData>
+      <texPath>Things/Weapons/SunderingSteel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <smeltable>true</smeltable>
+    
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>2.0</Mass>
+      <MarketValue>1200</MarketValue>
+    </statBases>
+    
+    <equippedStatOffsets>
+      <MeleeHitChance>0.05</MeleeHitChance>
+    </equippedStatOffsets>
+    
+    <comps>
+      <li Class="AKE.endfield.CompProperties_ArtsWeapon">
+        <appliesElement>Physical</appliesElement>
+        <applyChance>0.3</applyChance>
+        <bonusPerStage>0.05</bonusPerStage>
+      </li>
+    </comps>
+    
+    <recipeMaker>
+      <researchPrerequisite>EV_EndfieldMobilization</researchPrerequisite>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    
+    <costList>
+      <Steel>50</Steel>
+      <IC_CastDie>5</IC_CastDie>
+      <IC_ArmsInspector>4</IC_ArmsInspector>
+    </costList>
+
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities><li>Stab</li></capacities>
+        <power>20</power>
+        <cooldownTime>1.6</cooldownTime>
+        <armorPenetration>0.65</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities><li>Cut</li></capacities>
+        <power>25</power> <cooldownTime>1.6</cooldownTime>
+        <armorPenetration>0.45</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Снаряд рідкого азоту -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_IC_Nitrogen</defName>
+        <label>liquid nitrogen canister</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/Charge_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <color>(100, 200, 255)</color>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Extinguish</damageDef>
+            <damageAmountBase>200</damageAmountBase> <!-- Збільшено з 0 до 100 для збивання полум'я з дерев, кущів та юнітів -->
+            <armorPenetrationBase>0</armorPenetrationBase>
+            <explosionRadius>4.9</explosionRadius>
+            <speed>90</speed>
+            <soundExplode>Explosion_ExtinguishInert</soundExplode>
+            <postExplosionSpawnThingDef>IC_Filth_LiquidNitrogen</postExplosionSpawnThingDef>
+            <postExplosionSpawnChance>1.0</postExplosionSpawnChance>
+            <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+        </projectile>
+    </ThingDef>
+
+    <!-- Зброя турелі -->
+    <ThingDef ParentName="BaseWeaponTurret">
+        <defName>Gun_IC_EndfieldNitrogenTurret</defName>
+        <label>LN Tower</label>
+        <graphicData>
+            <texPath>Things/Building/Security/Nitrogen_Gun_Tower/Nitrogen_Gun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <AccuracyTouch>0.75</AccuracyTouch>
+            <AccuracyShort>0.70</AccuracyShort>
+            <AccuracyMedium>0.60</AccuracyMedium>
+            <AccuracyLong>0.45</AccuracyLong>
+            <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+            <Mass>50</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <verbs>
+            <li Class="VerbProperties">
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_IC_Nitrogen</defaultProjectile>
+                <range>30</range>
+                <minRange>3.9</minRange>
+                <forcedMissRadius>0.8</forcedMissRadius>
+                <warmupTime>1.0</warmupTime>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>10</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <!-- Будівля турелі -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>IC_EndfieldNitrogenTurret</defName>
+        <label>LN Tower</label>
+        <uiIconPath>Things/Building/Security/Nitrogen_Gun_Tower/UI_Gun</uiIconPath> <!-- Іконка в меню будівництва -->
+        <description>Mode of Attack: Fires special liquid nitrogen (LN) crystals that shatter upon impact to slow the movement speed of enemies in the area of effect.</description>
+        <thingClass>Building_TurretGun</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
+
+        <graphicData>
+            <texPath>Things/Building/Security/Gun_Tower/Base</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.75</fillPercent>
+        <size>(2,2)</size>
+
+        <statBases>
+            <MaxHitPoints>280</MaxHitPoints>
+            <WorkToBuild>16000</WorkToBuild>
+            <Mass>45</Mass>
+            <Flammability>0.1</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <tickerType>Normal</tickerType>
+
+        <costList>
+            <Steel>150</Steel>
+            <IC_Origocrust>30</IC_Origocrust>
+            <ComponentIndustrial>2</ComponentIndustrial>
+            <IC_AmethystPart>10</IC_AmethystPart>
+        </costList>
+
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>280</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+        </comps>
+
+        <designationCategory>Security</designationCategory>
+        <hasTooltip>true</hasTooltip>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+
+        <building>
+            <ai_combatDangerous>true</ai_combatDangerous>
+            <turretGunDef>Gun_IC_EndfieldNitrogenTurret</turretGunDef>
+            <turretTopDrawSize>2</turretTopDrawSize>
+            <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
+        </building>
+
+        <researchPrerequisites>
+            <li>EV_Baseturetts</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="PlantBase">
+    <defName>IC_Plant_Sandleaf</defName>
+    <label>sandleaf plant</label>
+    <description>A tough, drought-resistant plant with fibrous leaves. Highly valued for its material utility in production.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.4</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plants/Sandleaf/IC_SandleafPlant</texPath>
+      <graphicClass>Graphic_Single</graphicClass> <!-- Одинична текстура дорослої рослини -->
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plants/Sandleaf/IC_SandleafPlant_Immature</immatureGraphicPath> <!-- Незріла рослина -->
+      <growDays>6.00</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>IC_RawSandleaf</harvestedThingDef>
+      <harvestYield>2</harvestYield>
+      <sowMinSkill>3</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.3~1.0</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>Make_Biomass</defName>
+        <label>make Biomass</label>
+        <description>Make biomass, a substance made by processing organic matter or plants. It can be used to create fuel.</description>
+        <jobString>Make biomass</jobString>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Recipe_Cremate</soundWorking>
+        <workAmount>1000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <customSummary>feedstock</customSummary>
+                    <categories>
+                        <li>Foods</li>
+                        <li>PlantMatter</li>
+                    </categories>
+                    <disallowedThingDefs>
+                        <li>Hay</li>
+                        <li>Dye</li>
+                    </disallowedThingDefs>
+                    <disallowedCategories>
+                        <li>FoodMeals</li>
+                    </disallowedCategories>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Foods</li>
+                <li>PlantMatter</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>Hay</li>
+                <li>Dye</li>
+                <li MayRequire="Ludeon.RimWorld.Biotech">HemogenPack</li>
+                <li MayRequire="Ludeon.RimWorld.Biotech">BabyFood</li>
+            </disallowedThingDefs>
+            <disallowedCategories>
+                <li>FoodMeals</li>
+            </disallowedCategories>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <categories>
+                <li>FoodRaw</li>
+            </categories>
+            <disallowedCategories>
+                <li>MeatRaw</li>
+                <li>AnimalProductRaw</li>
+            </disallowedCategories>
+        </defaultIngredientFilter>
+        <recipeUsers>
+            <li>BiofuelRefinery</li>
+        </recipeUsers>
+        <products>
+            <IC_Biomass>10</IC_Biomass>
+        </products>
+    </RecipeDef>
+</Defs>
+

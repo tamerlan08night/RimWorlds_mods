@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Перевіряємо присутність C# класу Rimefeller у базі гри, ігноруючи ID мода -->
+    <Operation Class="PatchOperationConditional">
+        <!-- Шукаємо БУДЬ-ЯКИЙ об'єкт, який використовує трубу Rimefeller -->
+        <xpath>/Defs/ThingDef/comps/li[@Class="Rimefeller.CompProperties_Pipe"]</xpath>
+
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- 1. Твій робочий рецепт -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <RecipeDef>
+                            <defName>IC_Recipe_RefineFuelFromOil</defName>
+                            <label>refine chemfuel from crude oil</label>
+                            <description>Extract crude oil directly from the Rimefeller pipe network and refine it into chemfuel.</description>
+                            <jobString>Refining chemfuel.</jobString>
+                            <workAmount>500</workAmount>
+                            <workSpeedStat>WorkToMake</workSpeedStat>
+                            <ingredients />
+                            <products>
+                                <Chemfuel>10</Chemfuel>
+                            </products>
+                            <recipeUsers>
+                                <li>IC_AIC_ReactorCrucible</li>
+                            </recipeUsers>
+                            <modExtensions>
+                                <li Class="AKE.endfield.RecipeExtension_RimefellerFluid">
+                                    <oilAmount>50</oilAmount>
+                                </li>
+                            </modExtensions>
+                        </RecipeDef>
+                    </value>
+                </li>
+
+                <!-- 2. Твій прямий код для компонента труби -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="IC_AIC_ReactorCrucible"]/comps</xpath>
+                    <value>
+                        <li Class="Rimefeller.CompProperties_Pipe" />
+                    </value>
+                </li>
+
+                <!-- 3. Твій прямий код для сітки труб -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="IC_AIC_ReactorCrucible"]</xpath>
+                    <value>
+                        <placeWorkers>
+                            <li>Rimefeller.PlaceWorker_Pipe</li>
+                        </placeWorkers>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+</Patch>

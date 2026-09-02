@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- 1. Народний стабілізатор -->
+    <ThingDef ParentName="DrugBase">
+        <defName>OE_OripathySuppressantFolk</defName>
+        <label>Crude oripathy suppressant</label>
+        <description>Homemade remedies made from local herbs and chemicals. They freeze the development of Oripathy for 3 days, but do not alleviate the current stage. It is better than nothing at all...</description>
+        <graphicData>
+            <texPath>Things/Medicine/Weak_medicine</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>50</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <listOrder>1010</listOrder>
+            </li>
+        </comps>
+        <!-- Об'єднані налаштування їстівності -->
+        <ingestible>
+            <foodType>Processed</foodType>
+            <drugCategory>Medical</drugCategory>
+            <outcomeDoers>
+                <li Class="AKE.endfield.IngestionOutcomeDoer_StabilizeOripathy" />
+            </outcomeDoers>
+        </ingestible>
+        <tradeTags>
+            <li>MedicineImportant</li>
+        </tradeTags>
+        <modExtensions>
+            <li Class="AKE.endfield.OripathyStabilizerExtension">
+                <stabilizeDurationTicks>180000</stabilizeDurationTicks>
+                <instantSeverityReduction>0.0</instantSeverityReduction>
+                <stabilizerLabel>Crude Folk Suppressant</stabilizerLabel>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- 2. Фабричний інгібітор -->
+    <ThingDef ParentName="DrugBase">
+        <defName>OE_OripathyInhibitorFactory</defName>
+        <label>Oripathy control vaccine</label>
+        <description>High-quality factory inhibitor. Freezes crystallization for 5 days and completely resets the severity of the disease to the first stage.</description>
+        <graphicData>
+            <texPath>Things/Medicine/Edvanced_medicine</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>350</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <listOrder>1001</listOrder>
+            </li>
+        </comps>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <drugCategory>Medical</drugCategory>
+            <outcomeDoers>
+                <li Class="AKE.endfield.IngestionOutcomeDoer_StabilizeOripathy" />
+            </outcomeDoers>
+        </ingestible>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <modExtensions>
+            <li Class="AKE.endfield.OripathyStabilizerExtension">
+                <stabilizeDurationTicks>300000</stabilizeDurationTicks>
+                <instantSeverityReduction>1.0</instantSeverityReduction>
+                <stabilizerLabel>Lungmen Oripathy Inhibitor</stabilizerLabel>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- 1. СНАРЯД -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Bullet_IC_EndfieldPlasma"]</xpath>
+                    <value>
+                        <thingClass>CombatExtended.BulletCE</thingClass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Bullet_IC_EndfieldPlasma"]/projectile</xpath>
+                    <value>
+                        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                            <damageDef>Bullet</damageDef>
+                            <damageAmountBase>12</damageAmountBase>
+                            <armorPenetrationSharp>10</armorPenetrationSharp>
+                            <armorPenetrationBlunt>3</armorPenetrationBlunt>
+                            <speed>120</speed>
+                        </projectile>
+                    </value>
+                </li>
+
+                <!-- 2. ЗБРОЯ ТУРЕЛІ -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Gun_IC_EndfieldPlasmaTurret"]/statBases</xpath>
+                    <value>
+                        <SightsEfficiency>1.2</SightsEfficiency>
+                        <ShotSpread>0.08</ShotSpread>
+                        <SwayFactor>1.0</SwayFactor>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Gun_IC_EndfieldPlasmaTurret"]/verbs</xpath>
+                    <value>
+                        <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                                <hasStandardCommand>true</hasStandardCommand>
+                                <defaultProjectile>Bullet_IC_EndfieldPlasma</defaultProjectile>
+                                <warmupTime>0.5</warmupTime>
+                                <range>26</range>
+                                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                                <burstShotCount>10</burstShotCount>
+                                <soundCast>Shot_Autopistol</soundCast>
+                                <soundCastTail>GunTail_Light</soundCastTail>
+                                <muzzleFlashScale>9</muzzleFlashScale>
+                                <recoilAmount>0.7</recoilAmount>
+                                <recoilPattern>Mounted</recoilPattern>
+                            </li>
+                        </verbs>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Gun_IC_EndfieldPlasmaTurret"]</xpath>
+                    <value>
+                        <comps>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                                <aiAimMode>AimedShot</aiAimMode>
+                                <aiUseBurstMode>true</aiUseBurstMode>
+                                <aimedBurstShotCount>5</aimedBurstShotCount>
+                            </li>
+                        </comps>
+                    </value>
+                </li>
+
+                <!-- 3. БУДІВЛЯ ТУРЕЛІ: Заміна класа для активації кнопок CE -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="IC_EndfieldPlasmaTurret"]/thingClass</xpath>
+                    <value>
+                        <thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="IC_EndfieldPlasmaTurret"]/statBases</xpath>
+                    <value>
+                        <AimingAccuracy>0.5</AimingAccuracy>
+                        <ShootingAccuracyTurret>1.0</ShootingAccuracyTurret>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

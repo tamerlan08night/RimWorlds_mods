@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_EnrichedStoneConglomerate</defName>
+        <label>Enriched stone conglomerate</label>
+        <description>A mixture of processed stone and crushed Origocrust. This mixture is charged and ready for smelting and extracting certain types of metals. The only way to extract metals from stone.</description>
+        <graphicData>
+            <texPath>Things/Resource/IC_EnrichedStoneConglomerate</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <MarketValue>4</MarketValue>
+            <Mass>0.2</Mass>
+            <Flammability>0.0</Flammability>
+        </statBases>
+        <soundInteract>Grain_Drop</soundInteract> <!-- Звуки сипучого матеріалу -->
+        <soundDrop>Grain_Drop</soundDrop>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <stackLimit>150</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <burnableByRecipe>false</burnableByRecipe>
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+        </tradeTags>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>IC_RawSandleaf</defName>
+    <label>sandleaf</label>
+    <description>Harvested sandleaf leaves. High in fiber and specialized compounds, commonly used for crafting and processing.</description>
+    <graphicData>
+      <texPath>Things/Resource/IC_RawSandleaf</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.05</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stackLimit>150</stackLimit>
+  </ThingDef>
+</Defs>

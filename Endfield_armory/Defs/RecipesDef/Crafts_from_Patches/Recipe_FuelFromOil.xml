@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_Recipe_RefineFuelFromOil</defName>
+        <label>refine chemfuel from crude oil</label>
+        <description>Extract crude oil directly from the Rimefeller pipe network and refine it into chemfuel.</description>
+        <jobString>Refining chemfuel.</jobString>
+        <workAmount>500</workAmount>
+
+        <!-- Твердих інгредієнтів немає -->
+        <ingredients />
+
+        <!-- Готовий продукт -->
+        <products>
+            <Chemfuel>10</Chemfuel>
+        </products>
+
+        <!-- Вимога нафти з Rimefeller -->
+        <modExtensions>
+            <li Class="AKE.endfield.RecipeExtension_RimefellerFluid">
+                <oilAmount>100</oilAmount>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+</Defs>

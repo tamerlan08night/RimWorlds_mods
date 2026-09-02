@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeArmsINSPSet</defName>
+        <label>Craft arms INSP Set</label>
+        <description>A single-use toolset with AIC technology. Provides automated in-depth inspection of the entire weapon structure. Also repairs internal material damage and significantly enhances weapon performance.</description>
+        <jobString>Crafting arms INSP Set</jobString>
+        <workAmount>3600</workAmount> <!-- 60 seconds (60 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_gearing</soundWorking>
+
+        <researchPrerequisite>EM_AdvancedMaterials</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_SteelPart</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_CrystonPart</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_ArmsINSPKit</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>30</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IC_CrystonPart</li>
+                <li>IC_ArmsINSPKit</li>
+                <li>Steel</li>
+                <li>IC_SteelPart</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_GearingUnit</li>
+        </recipeUsers>
+
+        <products>
+            <IC_ArmsINSPSet>1</IC_ArmsINSPSet>
+        </products>
+    </RecipeDef>
+</Defs>

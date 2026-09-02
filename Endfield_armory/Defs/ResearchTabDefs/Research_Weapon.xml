@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <!-- Вивчення зброї -->
+    <ResearchProjectDef>
+        <defName>EV_EndfieldMobilization</defName>
+        <label>Endfield mobilization</label>
+
+        <prerequisites>
+            <li>EF_EndfieldTechnology</li>
+            <li>EM_MaterialsProcessing</li>
+        </prerequisites>
+
+        <!-- Прив'язка до нової вкладки -->
+        <tab>EF_ResearchTab_Endfield</tab>
+
+        <!-- Координати сітки (X - колонка, Y - рядок) -->
+        <researchViewX>1</researchViewX>
+        <researchViewY>4</researchViewY>
+
+        <baseCost>1500</baseCost>
+        <techLevel>Industrial</techLevel>
+    </ResearchProjectDef>
+    
+    <!-- Покращена зброя мечів -->
+    <ResearchProjectDef>
+        <defName>EV_AdvancedCloseCombat</defName>
+        <label>Advanced close combat</label>
+
+        <prerequisites>
+            <li>EF_EndfieldTechnology</li>
+            <li>EM_MaterialsProcessing</li>
+            <li>EM_AdvancedMaterials</li>
+            <li>EF_ImprovedFactories</li>
+        </prerequisites>
+
+        <!-- Прив'язка до нової вкладки -->
+        <tab>EF_ResearchTab_Endfield</tab>
+
+        <!-- Координати сітки (X - колонка, Y - рядок) -->
+        <researchViewX>1</researchViewX>
+        <researchViewY>4.5</researchViewY>
+
+        <baseCost>2500</baseCost>
+        <techLevel>Industrial</techLevel>
+    </ResearchProjectDef>
+
+    <!-- Базові турелі -->
+    <ResearchProjectDef>
+        <defName>EV_Baseturetts</defName>
+        <label>Basic protection systems</label>
+
+        <prerequisites>
+            <li>EM_MaterialsProcessing</li>
+        </prerequisites>
+
+        <!-- Прив'язка до нової вкладки -->
+        <tab>EF_ResearchTab_Endfield</tab>
+
+        <!-- Координати сітки (X - колонка, Y - рядок) -->
+        <researchViewX>1</researchViewX>
+        <researchViewY>1</researchViewY>
+
+        <baseCost>1500</baseCost>
+        <techLevel>Industrial</techLevel>
+    </ResearchProjectDef>
+
+    <!-- Покращені турелі -->
+    <ResearchProjectDef>
+        <defName>EV_ImprovedProtectionSystems</defName>
+        <label>Improved protection systems</label>
+
+        <prerequisites>
+            <li>EV_Baseturetts</li>
+            <li>EM_AdvancedMaterials</li>
+        </prerequisites>
+
+        <!-- Прив'язка до нової вкладки -->
+        <tab>EF_ResearchTab_Endfield</tab>
+
+        <!-- Координати сітки (X - колонка, Y - рядок) -->
+        <researchViewX>2</researchViewX>
+        <researchViewY>1</researchViewY>
+
+        <baseCost>2000</baseCost>
+        <techLevel>Industrial</techLevel>
+    </ResearchProjectDef>
+    
+</Defs>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <SoundDef>
+        <defName>RE_CommanderSound</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapon/Commander</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>45~45</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+                <distRange>0~50</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Візуальний спалах (Fleck) під ногами при досягненні 3 стадії -->
+    <FleckDef ParentName="FleckBase">
+        <defName>RE_NeverRestPeakPulse</defName>
+        <graphicData>
+            <!-- Використовуємо ванільну текстуру імпульсу для красивого кільця, але перефарбовуємо в червоний -->
+            <texPath>Things/Effects/Never rest/PeakPulse</texPath>
+            <graphicClass>Graphic_FleckPulse</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <!-- Червоно-помаранчевий колір (RGBA) -->
+            <color>(0.95, 0.25, 0.1, 0.8)</color>
+            <drawSize>3.0</drawSize>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.1</fadeInTime>
+        <solidTime>0.2</solidTime>
+        <fadeOutTime>0.5</fadeOutTime>
+    </FleckDef>
+
+</Defs>

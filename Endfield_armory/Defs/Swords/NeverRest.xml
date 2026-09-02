@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>RE_NeverRest</defName>
+    <label>Never Rest</label>
+    <description>A weapon equipped by Endfield operators to significantly boost their combat capabilities. A weapon from the furnaces of Fort Forgefane. Though it has undergone multiple rounds of recasting, the subsumed edge is still imbued with an intimidating force of domination.\n\n[Weapon Specification]: Domination Blade. Requires Melee level 12+ to unleash its true potential via scaling, doubling its base damage and crushing standard enemy plates via dense material alignment.</description>
+    
+    <graphicData>
+      <texPath>Things/Weapons/NeverRest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints> <WorkToMake>55000</WorkToMake>
+      <Mass>2.2</Mass>
+      <MarketValue>2800</MarketValue>
+    </statBases>
+
+    <equippedStatOffsets>
+      <MeleeHitChance>0.20</MeleeHitChance>
+    </equippedStatOffsets>
+
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="AKE.endfield.CompProperties_WeaponSkillScaling">
+        <scalings>
+          <li>
+            <skill>Melee</skill>
+            <minSkill>12</minSkill>
+            <damageMultiplier>2.0</damageMultiplier>
+          </li>
+        </scalings>
+      </li>
+    </comps>
+
+    <costList>
+      <Steel>200</Steel>
+      <Plasteel>20</Plasteel>
+      <IC_ArmsINSPSet>3</IC_ArmsINSPSet>
+      <IC_HeavyCastDie>2</IC_HeavyCastDie>
+    </costList>
+
+    <recipeMaker>
+      <researchPrerequisite>EV_AdvancedCloseCombat</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>11</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities><li>Stab</li></capacities>
+        <power>28</power>
+        <cooldownTime>1.35</cooldownTime>
+        <armorPenetration>0.60</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities><li>Cut</li></capacities>
+        <power>34</power>
+        <cooldownTime>1.35</cooldownTime>
+        <armorPenetration>0.50</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

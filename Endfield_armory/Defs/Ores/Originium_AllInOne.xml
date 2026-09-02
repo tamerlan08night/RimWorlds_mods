@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>OE_RawOriginium</defName>
+    <label>Raw originium</label>
+    <description>A shard of solidified originium.</description>
+    <graphicData>
+      <texPath>Things/Resource/OE_RawOriginium</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>1</MarketValue>
+      <Mass>0.5</Mass>
+    </statBases>
+    <deepCommonality>1.0</deepCommonality>
+    <deepCountPerPortion>10</deepCountPerPortion>
+    <deepLumpSizeRange>1~5</deepLumpSizeRange>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>OE_OriginiumSurface</defName>
+    <label>surface originium crystals</label>
+    <graphicData>
+      <texPath>Things/Building/SurfaceResurces/OE_OriginiumSurface</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2500</MaxHitPoints> 
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>OE_RawOriginium</mineableThing>
+      <mineableYield>10</mineableYield>
+      <veinMineable>true</veinMineable>
+      <mineableScatterCommonality>0.23</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>4</min>
+        <max>8</max>
+      </mineableScatterLumpSizeRange>
+    </building>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <selectable>true</selectable>
+    <thingClass>Mineable</thingClass>
+  </ThingDef>
+
+</Defs>

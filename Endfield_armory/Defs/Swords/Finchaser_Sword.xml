@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp">
+    <defName>RE_Finchaser</defName>
+    <label>Finchaser 3.0</label>
+    <description>A weapon equipped by Endfield operators to significantly boost their combat capabilities. The flagship product of the Outdoor Explorer series of Northmarch Support Hub. Rigged outdoor design approaches and portability made it one of the top recommendations by many explorers and hobby anglers.\n\n[Weapon Specification]: ATK +5%. When the wielder's battle skill applies Solidification, the target suffers Cryo DMG Taken +7% for 15.00s (Does not stack).</description>
+    <graphicData>
+      <texPath>Things/Weapons/Finchaser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <smeltable>true</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>1.2</Mass>
+      <MarketValue>1400</MarketValue>
+    </statBases>
+
+    <equippedStatOffsets>
+      <MoveSpeed>0.03</MoveSpeed>
+    </equippedStatOffsets>
+
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="AKE.endfield.CompProperties_ArtsWeapon">
+        <appliesElement>Cryo</appliesElement>
+        <applyChance>0.2</applyChance>
+        <bonusPerStage>0.10</bonusPerStage>
+      </li>
+    </comps>
+
+    <costList>
+      <IC_Origocrust>20</IC_Origocrust>
+      <Steel>90</Steel>
+      <IC_ArmsINSPKit>3</IC_ArmsINSPKit>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <IC_CastDie>2</IC_CastDie>
+    </costList>
+
+    <recipeMaker>
+      <researchPrerequisite>EV_EndfieldMobilization</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities><li>Stab</li></capacities>
+        <power>14</power>
+        <cooldownTime>1.3</cooldownTime>
+        <armorPenetration>0.45</armorPenetration>
+      </li>
+      <li>
+        <label>blade</label>
+        <capacities><li>Cut</li></capacities>
+        <power>16</power>
+        <cooldownTime>1.0</cooldownTime>
+        <armorPenetration>0.35</armorPenetration>
+        <extraMeleeDamages>
+          <li>
+            <def>Arknights_Cryo_Damage</def>
+            <amount>4</amount>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Arknights Endfield Armory</name>
+  <author>Tamerlan08_1</author>
+  <packageId>tamerlan081.AKE.endfield</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Aoba.Fortress.Industrial</li>
+    <li>Dubwise.Rimefeller</li>
+    <li>CETeam.CombatExtended</li>
+  </loadAfter>
+  <description>This mod adds key Talos II mechanics to your game, from a high-tech arsenal to the dangerous secrets of Oripathy.
+
+    Weapons: Equip your settlers with futuristic swords and wedges designed to Endfield Industries standards.
+
+    Industrial Complex: Build your own automated factory to mine, refine ore, and mass-produce high-tech components.
+
+    Arts System: Master magical-technological abilities (Arts) that can turn the tide of any battle.
+
+    Oripathy: Face a dangerous crystal disease. It becomes a severe test of survival.</description>
+</ModMetaData>

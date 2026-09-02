@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeLCValleyBattery</defName>
+        <label>Create LC Valley Battery.</label>
+        <description>Pack electronic components and origin to create a battery for a thermite bank.</description>
+        <jobString>Make LC battery.</jobString>
+        <workAmount>3600</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_packaging</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_AmethystPart</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_OriginiumPowder</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IC_OriginiumPowder</li>
+                <li>IC_AmethystPart</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_PackingUnit</li>
+        </recipeUsers>
+
+        <researchPrerequisite>EF_ThermiteEnergy</researchPrerequisite>
+
+        <products>
+            <IC_LCValleyBattery>1</IC_LCValleyBattery>
+        </products>
+
+    </RecipeDef>
+</Defs>

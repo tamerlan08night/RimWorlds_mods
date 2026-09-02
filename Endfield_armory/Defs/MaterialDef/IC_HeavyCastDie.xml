@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_HeavyCastDie</defName>
+        <label>Heavy cast die</label>
+        <description>A heavy casting die made using rare materials. Techno-Protocol activation lets this die enhance general material strengths in weapons.</description>
+
+        <graphicData>
+            <texPath>Things/Resource/IC_HeavyCastDie</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.85, 0.85)</drawSize>
+        </graphicData>
+
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>           <!-- Прес-форма з рідкісних сплавів дуже міцна -->
+            <MarketValue>180</MarketValue>              <!-- Рідкісні матеріали + технології = висока ціна -->
+            <Mass>3</Mass>                             <!-- Суцільна металева штампувальна форма має вагу -->
+            <Flammability>0.0</Flammability>
+        </statBases>
+
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+
+        <stackLimit>75</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <burnableByRecipe>false</burnableByRecipe>
+
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
+</Defs>

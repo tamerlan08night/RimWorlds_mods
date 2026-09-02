@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>AIC_CentralHub</defName>
+    <label>Sub-AIC central Hub</label>
+    <description>The Endfield system's gigantic automated logistics complex, combined with a wind turbine and energy storage, is the main building to double the Endfield factory.</description>
+
+    <thingClass>AKE.endfield.Building_AICHub</thingClass>
+    <tickerType>Rare</tickerType>
+
+    <graphicData>
+      <texPath>Things/Building/AIC/ArcTurbine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(10,10)</drawSize>
+    </graphicData>
+
+    <size>(10,10)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+
+    <designationCategory>Production</designationCategory>
+
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+    </building>
+
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Battery">
+        <storedEnergyMax>4000</storedEnergyMax>
+        <efficiency>0.7</efficiency>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+
+    <statBases>
+      <MaxHitPoints>2500</MaxHitPoints>
+      <WorkToBuild>15000</WorkToBuild>
+      <Flammability>0.1</Flammability>
+    </statBases>
+
+    <costList>
+      <Steel>1000</Steel>
+      <IC_Protocolpackage>1</IC_Protocolpackage>
+      <IC_Automationpackage>1</IC_Automationpackage>
+      <IC_Mechanicalpackage>1</IC_Mechanicalpackage>
+      <IC_Transportpackage>1</IC_Transportpackage>
+      <ComponentIndustrial>15</ComponentIndustrial>
+    </costList>
+
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>EF_EndfieldTechnology</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

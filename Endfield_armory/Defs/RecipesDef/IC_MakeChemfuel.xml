@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeChemfuel</defName>
+        <label>make chemfuel</label>
+        <description>By using technology and chemical reactions to turn wood into chemfuel.</description>
+        <jobString>Processing cryston fiber.</jobString>
+        <workAmount>2400</workAmount> <!-- 40 seconds (40 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>EF_reactorcrucible</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>WoodLog</li>
+                    </thingDefs>
+                </filter>
+                <count>25</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>WoodLog</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_ReactorCrucible</li>
+        </recipeUsers>
+
+        <products>
+            <Chemfuel>18</Chemfuel>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>IC_MakeChemfuel_Biomass</defName>
+        <label>make chemfuel from biomass</label>
+        <description>By using technology and chemical reactions to turn biomass into chemfuel.</description>
+        <jobString>Processing chemfuel.</jobString>
+        <workAmount>2400</workAmount> <!-- 40 seconds (40 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>EF_reactorcrucible</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_Biomass</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IC_Biomass</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_ReactorCrucible</li>
+        </recipeUsers>
+
+        <products>
+            <Chemfuel>5</Chemfuel>
+        </products>
+    </RecipeDef>
+</Defs>

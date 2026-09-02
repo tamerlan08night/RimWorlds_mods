@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>RE_EdgeOfLightness</defName>
+    <label>Edge of Lightness</label>
+    <description>A weapon equipped by Endfield operators to significantly boost their combat capabilities. A standard weapon produced by Endfield Industries. Design is provided by the Creative Prototyping Team founded by Senior Arsenal Engineer Opero. The hilt features auxiliary modules that can be taken off.\n\n[Weapon Specification]: Secondary Attribute +5%. Recovering SP triggers a team-wide Heat and Electric DMG boost (+3% per stack, Max 3, independent 20s timers).</description>
+    <graphicData>
+      <texPath>Things/Weapons/EdgeOfLightness</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <MarketValue>1400</MarketValue>
+      <Mass>1.4</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <equippedStatOffsets>
+      <MoveSpeed>0.10</MoveSpeed> </equippedStatOffsets>
+
+    <tickerType>Normal</tickerType>
+    
+    <comps>
+      <li Class="AKE.endfield.CompProperties_EdgeOfLightnessAura" />
+    </comps>
+
+    <costList>
+      <IC_FerriumCube>20</IC_FerriumCube>
+      <Steel>20</Steel>
+      <IC_CastDie>5</IC_CastDie>
+      <IC_ArmsINSPKit>3</IC_ArmsINSPKit>
+    </costList>
+    
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>EV_EndfieldMobilization</researchPrerequisite>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities><li>Poke</li></capacities>
+        <power>7</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities><li>Stab</li></capacities>
+        <power>18</power>
+        <cooldownTime>1.2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities><li>Cut</li></capacities>
+        <power>22</power>
+        <cooldownTime>1.2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

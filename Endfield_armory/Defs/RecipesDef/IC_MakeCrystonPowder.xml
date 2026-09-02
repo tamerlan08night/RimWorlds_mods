@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeCrystonPowder</defName>
+    <label>make cryston powder</label>
+    <description>Synthesize cryston powder by combining amethyst dust and sandleaf powder.</description>
+    <jobString>Synthesizing cryston powder.</jobString>
+    <workAmount>1800</workAmount> <!-- 30 секунд (30 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>EF_griding</soundWorking>
+
+    <researchPrerequisite>EM_AdvancedMaterials</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_AmethystDust</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_SandleafPowder</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_AmethystDust</li>
+        <li>IC_SandleafPowder</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>IC_AIC_GrindingUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_CrystonPowder>1</IC_CrystonPowder>
+    </products>
+  </RecipeDef>
+</Defs>

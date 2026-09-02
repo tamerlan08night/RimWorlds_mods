@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeAmethystFiberFromDust</defName>
+    <label>create amethyst fiber (from dust)</label>
+    <description>Sinter and extract fibers from amethyst powder.</description>
+    <jobString>Singes amethyst fibers.</jobString>
+    <workAmount>900</workAmount> <!-- 15 секунд (15 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>EF_refinery</soundWorking>
+
+    <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_AmethystDust</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_AmethystDust</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>AIC_RefiningUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_AmethystFiber>1</IC_AmethystFiber>
+    </products>
+  </RecipeDef>
+</Defs>

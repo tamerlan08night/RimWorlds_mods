@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ResearchTabDef>
+        <defName>EF_ResearchTab_Endfield</defName>
+        <label>Endfield</label>
+    </ResearchTabDef>
+
+    <!-- Вивчення заводу -->
+    <ResearchProjectDef>
+        <defName>EF_EndfieldTechnology</defName>
+        <label>Endfield Technology</label>
+
+        <!-- Прив'язка до нової вкладки -->
+        <tab>EF_ResearchTab_Endfield</tab>
+
+        <prerequisites>
+            <li>MicroelectronicsBasics</li> <!-- Ванільна мікроелектроніка -->
+        </prerequisites>
+
+        <!-- Координати сітки (X - колонка, Y - рядок) -->
+        <researchViewX>0</researchViewX>
+        <researchViewY>3</researchViewY>
+
+        <baseCost>1500</baseCost>
+        <techLevel>Industrial</techLevel>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>EF_ImprovedFactories</defName>
+        <label>Improved factories</label>
+
+        <!-- Прив'язка до нової вкладки -->
+        <tab>EF_ResearchTab_Endfield</tab>
+
+        <prerequisites>
+            <li>EF_EndfieldTechnology</li>
+        </prerequisites>
+
+        <!-- Координати сітки (X - колонка, Y - рядок) -->
+        <researchViewX>2</researchViewX>
+        <researchViewY>3</researchViewY>
+
+        <baseCost>1500</baseCost>
+        <techLevel>Industrial</techLevel>
+    </ResearchProjectDef>
+
+    
+    <ResearchProjectDef>
+        <defName>EF_ThermiteEnergy</defName>
+        <label>Thermite energy</label>
+
+        <tab>EF_ResearchTab_Endfield</tab>
+
+        <prerequisites>
+            <li>EF_ImprovedFactories</li>
+        </prerequisites>
+
+        <researchViewX>3</researchViewX>
+        <researchViewY>2</researchViewY>
+
+        <baseCost>2000</baseCost>
+        <techLevel>Industrial</techLevel>
+    </ResearchProjectDef>
+
+    
+    <ResearchProjectDef>
+        <defName>EF_SCValeyBatteryReserch</defName>
+        <label>SC Valley Battery</label>
+
+        <!-- Прив'язка до нової вкладки -->
+        <tab>EF_ResearchTab_Endfield</tab>
+
+        <prerequisites>
+            <li>EF_ThermiteEnergy</li>
+        </prerequisites>
+
+        <!-- Координати сітки (X - колонка, Y - рядок) -->
+        <researchViewX>2</researchViewX>
+        <researchViewY>2</researchViewY>
+
+        <baseCost>2500</baseCost>
+        <techLevel>Industrial</techLevel>
+    </ResearchProjectDef>
+
+    
+    <ResearchProjectDef>
+        <defName>EF_HCValeyBatteryReserch</defName>
+        <label>HC Valley Battery</label>
+
+        <prerequisites>
+            <li>EF_SCValeyBatteryReserch</li>
+        </prerequisites>
+
+        <!-- Прив'язка до нової вкладки -->
+        <tab>EF_ResearchTab_Endfield</tab>
+
+        <!-- Координати сітки (X - колонка, Y - рядок) -->
+        <researchViewX>1</researchViewX>
+        <researchViewY>2</researchViewY>
+
+        <baseCost>3000</baseCost>
+        <techLevel>Industrial</techLevel>
+    </ResearchProjectDef>
+
+</Defs>

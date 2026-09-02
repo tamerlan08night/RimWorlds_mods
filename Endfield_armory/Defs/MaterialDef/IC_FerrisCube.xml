@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>IC_FerriumCube</defName>
+        <label>Ferrium cube</label>
+        <description>A processed block of ferrite, similar in properties to an iron alloy but with a different structure. It is used in further production.</description>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <graphicData>
+            <texPath>Things/Resource/IC_FerrisCube</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MarketValue>10</MarketValue>
+            <Mass>1</Mass>
+        </statBases>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <useHitPoints>false</useHitPoints>
+        <burnableByRecipe>false</burnableByRecipe>
+        <stackLimit>75</stackLimit>
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+        </tradeTags>
+    </ThingDef>
+</Defs>

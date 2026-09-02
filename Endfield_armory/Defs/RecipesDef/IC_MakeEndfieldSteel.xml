@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeEndfieldSteel</defName>
+    <label>process endfield steel</label>
+    <description>Process dense ferrium powder according to Endfield Industries standards to produce high-grade steel.</description>
+    <jobString>Processing Endfield steel.</jobString>
+    <workAmount>1500</workAmount> <!-- 25 seconds (25 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>EF_refinery</soundWorking>
+
+    <researchPrerequisite>EM_AdvancedMaterials</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_DenseFerriumPowder</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_DenseFerriumPowder</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>AIC_RefiningUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_EndfieldSteel>1</IC_EndfieldSteel>
+    </products>
+  </RecipeDef>
+</Defs>

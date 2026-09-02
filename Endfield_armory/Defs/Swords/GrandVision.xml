@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>RE_GrandVision</defName>
+    <label>Grand Vision</label>
+    <description>A quality weapon manufactured by Endfield Industries, equipped by the Endministrator to significantly boost combat capabilities. Innovations include using an experimental Originium-based material as the blade body to give it excellent energy conductivity. [Weapon Specification]: Arts Intensity +30. Requires Intellectual skill level 8+ to unleash its true potential via scaling. Striking targets affected by Cryo or Physical Arts activates Endministrator Majesty for 20 seconds, granting +36% Physical DMG.</description>
+    
+    <graphicData>
+      <texPath>Things/Weapons/GrandVision</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize> 
+    </graphicData>
+    
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable> 
+    <burnableByRecipe>false</burnableByRecipe>
+    
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToMake>65000</WorkToMake>
+      <Mass>2.0</Mass>
+      <MarketValue>2900</MarketValue>
+    </statBases>
+
+    <equippedStatOffsets>
+      <MeleeHitChance>0.35</MeleeHitChance>
+    </equippedStatOffsets>
+
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities><li>Stab</li></capacities>
+        <power>17</power>
+        <cooldownTime>1.3</cooldownTime>
+        <armorPenetration>0.55</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities><li>Cut</li></capacities>
+        <power>20</power>
+        <cooldownTime>1.3</cooldownTime>
+        <armorPenetration>0.55</armorPenetration>
+      </li>
+    </tools>
+
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="AKE.endfield.CompProperties_WeaponSkillScaling">
+        <scalings>
+          <li>
+            <skill>Intellectual</skill>
+            <minSkill>8</minSkill> 
+            <damageMultiplier>2.0</damageMultiplier>
+
+          </li>
+        </scalings>
+      </li>
+    </comps>
+
+    <costList>
+      <Steel>80</Steel>
+      <IC_Origocrust>30</IC_Origocrust>
+      <IC_HeavyCastDie>2</IC_HeavyCastDie>
+      <IC_ArmsINSPSet>2</IC_ArmsINSPSet>
+    </costList>
+
+    <recipeMaker>
+      <researchPrerequisite>EV_AdvancedCloseCombat</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>13</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>OE_RawAmethyst</defName>
+    <label>Raw amethyst</label>
+    <description>A shard of solidified amethyst.</description>
+    <graphicData>
+      <texPath>Things/Resource/OE_RawAmethyst</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.7</Mass>
+    </statBases>
+    <deepCommonality>1.0</deepCommonality>
+    <deepCountPerPortion>5</deepCountPerPortion>
+    <deepLumpSizeRange>1~2</deepLumpSizeRange>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>OE_AmethystSurface</defName>
+    <label>surface amethyst crystals</label>
+    <graphicData>
+      <texPath>Things/Building/SurfaceResurces/OE_AmethystSurface</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2500</MaxHitPoints> 
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>OE_RawAmethyst</mineableThing>
+      <mineableYield>10</mineableYield>
+      <veinMineable>true</veinMineable>
+      <mineableScatterCommonality>0.05</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>2</min>
+        <max>5</max>
+      </mineableScatterLumpSizeRange>
+    </building>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <selectable>true</selectable>
+    <thingClass>Mineable</thingClass>
+  </ThingDef>
+
+</Defs>

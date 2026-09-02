@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Aoba.Fortress.Industrial</li>
+            <li>aoba.fortress.industrial</li>
+            <li>Fortifications - Industrial</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="IC_AIC_GrindingUnit"]/recipes</xpath>
+            <value>
+                <li>FT_Make_ConcreteByChunk</li>
+                <li>FT_Make_ConcreteByBlock</li>
+            </value>
+        </match>
+    </Operation>
+</Patch>

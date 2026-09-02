@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeHCValleyBattery</defName>
+        <label>Create HC Valley Battery.</label>
+        <description>Pack electronic components and origin to create a battery for a thermite bank.</description>
+        <jobString>Make HC battery.</jobString>
+        <workAmount>3600</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>EF_packaging</soundWorking>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_SteelPart</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>IC_DenseOriginiumPowder</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>IC_DenseOriginiumPowder</li>
+                <li>IC_SteelPart</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>IC_AIC_PackingUnit</li>
+        </recipeUsers>
+
+        <researchPrerequisite>EF_HCValeyBatteryReserch</researchPrerequisite>
+
+        <products>
+            <IC_HCValleyBattery>1</IC_HCValleyBattery>
+        </products>
+
+    </RecipeDef>
+</Defs>

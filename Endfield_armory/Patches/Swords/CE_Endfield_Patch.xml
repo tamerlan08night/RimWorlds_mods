@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Combat Extended</li></mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="RE_EndfieldStarterBlade"]/tools</xpath>
+          <value>
+            <tools>
+              <li Class="CombatExtended.ToolCE">
+                <label>handle</label>
+                <capacities><li>Blunt</li></capacities>
+                <power>2</power>
+                <cooldownTime>1.0</cooldownTime>
+                <armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+              </li>
+              <li Class="CombatExtended.ToolCE">
+                <label>point</label>
+                <capacities><li>Stab</li></capacities>
+                <power>11</power> <cooldownTime>1.2</cooldownTime>
+                <armorPenetrationSharp>7</armorPenetrationSharp>
+                <armorPenetrationBlunt>1.2</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+              </li>
+              <li Class="CombatExtended.ToolCE">
+                <label>edge</label>
+                <capacities><li>Cut</li></capacities>
+                <power>13</power> <cooldownTime>1.05</cooldownTime> <armorPenetrationSharp>5</armorPenetrationSharp>
+                <armorPenetrationBlunt>1.5</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+              </li>
+            </tools>
+          </value>
+        </li>
+        
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RE_EndfieldStarterBlade"]/statBases</xpath>
+          <value>
+            <Bulk>3</Bulk>
+            <MeleeCritChance>0.12</MeleeCritChance>
+            <MeleeParryChance>0.40</MeleeParryChance> </value>
+        </li>
+        
+      </operations>
+    </match>
+  </Operation>
+</Patch>

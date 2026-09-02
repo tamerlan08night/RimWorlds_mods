@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeAmethystDust</defName>
+    <label>create amethyst dust.</label>
+    <description>Grind raw amethyst crystals into a fine industrial powder.</description>
+    <jobString>Crushes amethyst.</jobString>
+    <workAmount>600</workAmount> 
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>EF_crasher</soundWorking>
+
+    <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>OE_RawAmethyst</li>
+          </thingDefs>
+        </filter>
+        <count>2</count> 
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OE_RawAmethyst</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>IC_AIC_ShreddingUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_AmethystDust>1</IC_AmethystDust>
+    </products>
+    
+  </RecipeDef>
+</Defs>

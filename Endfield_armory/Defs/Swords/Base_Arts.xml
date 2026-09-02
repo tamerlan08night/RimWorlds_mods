@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef Name="Arknights_Arts_BaseHediff" Abstract="True">
+    <hediffClass>AKE.endfield.Hediff_ArtsElement</hediffClass>
+    <defaultLabelColor>(0.8, 0.4, 1.0)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.01</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+  </HediffDef>
+
+  <DamageDef Name="Arknights_Arts_DamageBase" Abstract="True">
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <deathMessage>{0} став жертвою Arts.</deathMessage>
+  </DamageDef>
+</Defs>

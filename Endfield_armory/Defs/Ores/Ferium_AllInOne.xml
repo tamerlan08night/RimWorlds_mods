@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>OE_RawFerium</defName>
+    <label>Raw ferium</label>
+    <description>A shard of solidified ferium.</description>
+    <graphicData>
+      <texPath>Things/Resource/OE_RawFerium</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+    <deepCommonality>1.0</deepCommonality>
+    <deepCountPerPortion>10</deepCountPerPortion>
+    <deepLumpSizeRange>1~4</deepLumpSizeRange>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>OE_FeriumSurface</defName>
+    <label>surface ferium crystals</label>
+    <graphicData>
+      <texPath>Things/Building/SurfaceResurces/OE_FeriumSurface</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints> 
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>OE_RawFerium</mineableThing>
+      <mineableYield>10</mineableYield>
+      <veinMineable>true</veinMineable>
+      <mineableScatterCommonality>0.02</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>3</min>
+        <max>6</max>
+      </mineableScatterLumpSizeRange>
+    </building>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <selectable>true</selectable>
+    <thingClass>Mineable</thingClass>
+  </ThingDef>
+
+</Defs>

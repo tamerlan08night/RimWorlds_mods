@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeFerriumCube</defName>
+    <label>create a ferium cube</label>
+    <description>Process raw ferium into industrial ferrium cube.</description>
+    <jobString>Forms a ferrium cube.</jobString>
+    <workAmount>900</workAmount> 
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>EF_refinery</soundWorking>
+
+    <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>OE_RawFerium</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OE_RawFerium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>AIC_RefiningUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_FerriumCube>1</IC_FerriumCube>
+    </products>
+    
+  </RecipeDef>
+</Defs>

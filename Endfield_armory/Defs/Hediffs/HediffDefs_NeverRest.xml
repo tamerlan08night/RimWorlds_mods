@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>RE_NeverRestWielderBuff</defName>
+    <label>never rest</label>
+    <labelNoun>a never rest charge</labelNoun>
+    <description>Each blow fills the wielder with rage. Sword and warrior merge into a single impulse.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.95, 0.45, 0.1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <!-- Компонент аури для поширення бафа на союзників -->
+      <li Class="AKE.endfield.HediffCompProperties_NeverRestAura">
+        <range>8</range>
+      </li>
+      <li Class="AKE.endfield.HediffCompProperties_DrawOverlayIcon">
+        <iconPath>Things/Effects/Never rest/Commander buf</iconPath>
+        <onlyAtPeak>true</onlyAtPeak>
+        <altitudeOffset>1.3</altitudeOffset>
+        <iconSize>0.7</iconSize>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>stage 1</label>
+        <minSeverity>1</minSeverity>
+      </li>
+      <li>
+        <label>stage 2</label>
+        <minSeverity>2</minSeverity>
+        <capMods>
+          <li><capacity>Consciousness</capacity><offset>0.15</offset></li>
+          <li><capacity>Moving</capacity><offset>0.15</offset></li>
+          <li><capacity>BloodPumping</capacity><offset>0.15</offset></li>
+          <li><capacity>BloodFiltration</capacity><offset>0.15</offset></li>
+          <li><capacity>Breathing</capacity><offset>0.15</offset></li>
+        </capMods>
+      </li>
+      <li>
+        <label>peak</label>
+        <minSeverity>3</minSeverity>
+        <capMods>
+          <li><capacity>Consciousness</capacity><offset>0.30</offset></li>
+          <li><capacity>Moving</capacity><offset>0.30</offset></li>
+          <li><capacity>BloodPumping</capacity><offset>0.30</offset></li>
+          <li><capacity>BloodFiltration</capacity><offset>0.30</offset></li>
+          <li><capacity>Breathing</capacity><offset>0.30</offset></li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>RE_NeverRestAllianceBuff</defName>
+    <label>never rest (ally)</label>
+    <description>The presence of a warrior commander inspires other allies to fight to the last!</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.35, 0.75, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="AKE.endfield.HediffCompProperties_DrawOverlayIcon">
+        <iconPath>Things/Effects/Never rest/ally buf</iconPath>
+        <onlyAtPeak>false</onlyAtPeak>
+        <altitudeOffset>1.3</altitudeOffset>
+        <iconSize>0.7</iconSize>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <capMods>
+          <li><capacity>Consciousness</capacity><offset>0.15</offset></li>
+          <li><capacity>Moving</capacity><offset>0.15</offset></li>
+          <li><capacity>BloodPumping</capacity><offset>0.15</offset></li>
+          <li><capacity>BloodFiltration</capacity><offset>0.15</offset></li>
+          <li><capacity>Breathing</capacity><offset>0.15</offset></li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

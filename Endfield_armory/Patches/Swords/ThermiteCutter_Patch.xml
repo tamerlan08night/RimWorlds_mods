@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Combat Extended</li></mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="RE_ThermiteCutter"]/tools</xpath>
+          <value>
+            <tools>
+              <li Class="CombatExtended.ToolCE">
+                <label>edge</label>
+                <capacities><li>Cut</li></capacities>
+                <power>35</power> <cooldownTime>1.8</cooldownTime>
+                <armorPenetrationSharp>20</armorPenetrationSharp> 
+                <armorPenetrationBlunt>12.0</armorPenetrationBlunt> 
+                <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+              </li>
+            </tools>
+          </value>
+        </li>
+        
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RE_ThermiteCutter"]/statBases</xpath>
+          <value>
+            <Bulk>4.5</Bulk>
+            <MeleeCritChance>0.25</MeleeCritChance> 
+            <MeleeParryChance>0.30</MeleeParryChance> 
+          </value>
+        </li>
+        
+      </operations>
+    </match>
+  </Operation>
+</Patch>

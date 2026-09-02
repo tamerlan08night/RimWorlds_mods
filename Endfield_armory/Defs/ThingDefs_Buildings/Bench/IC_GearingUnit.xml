@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>IC_AIC_GearingUnit</defName>
+        <label>AIC gearing unit</label>
+        <description>A facility that laminates different materials together to create gear components.
+            A top-tier piece of equipment must undergo multiple processing steps that include textile weaving and compression lamination of various fabric and lining.</description>
+
+        <!-- C# Клас і Тікер -->
+        <thingClass>AKE.endfield.Building_ICFactoryBase</thingClass>
+        <tickerType>Normal</tickerType>
+
+        <!-- Графіка та розміри -->
+        <graphicData>
+            <texPath>Things/Building/Production/IC_GearingUnit</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(6,4)</drawSize>
+        </graphicData>
+        <size>(6,4)</size>
+        <passability>Impassable</passability>
+        <fillPercent>1.0</fillPercent>
+
+        <!-- Можливість переносити та будувати -->
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsProduction</li>
+        </thingCategories>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>Production</designationCategory>
+        <constructEffect>ConstructMetal</constructEffect>
+
+        <!-- Характеристики -->
+        <statBases>
+            <MaxHitPoints>800</MaxHitPoints>
+            <WorkToBuild>120000</WorkToBuild>
+            <Mass>135</Mass>
+            <Flammability>0.2</Flammability>
+        </statBases>
+
+        <!-- Вартість побудови -->
+        <costList>
+            <IC_Protocolpackage>1</IC_Protocolpackage>
+            <IC_Automationpackage>1</IC_Automationpackage>
+            <IC_Mechanicalpackage>1</IC_Mechanicalpackage>
+            <Steel>350</Steel>
+        </costList>
+        <researchPrerequisites>
+            <li>EF_ImprovedFactories</li>
+        </researchPrerequisites>
+
+        <!-- Компоненти (Енергія) -->
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>900</basePowerConsumption>
+            </li>
+        </comps>
+
+        <!-- Інтерфейс вкладки рецептів -->
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+
+        <!-- Порожній список рецептів для підтримки патчів -->
+        <recipes />
+
+        <!-- Налаштування будівлі -->
+        <building>
+            <isSittable>false</isSittable>
+            <workTableRoomRole>Workshop</workTableRoomRole>
+            <buildingTags>
+                <li>Production</li>
+            </buildingTags>
+        </building>
+    </ThingDef>
+</Defs>

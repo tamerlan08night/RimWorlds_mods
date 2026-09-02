@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+
+        <defName>IC_ArmsINSPKit</defName>
+        <label>Arms INSP Kit</label>
+        <description>A single-use mini-kit with AIC technology. Provides automated inspection of the entire weapon structure. Also repairs internal material damage and enhances weapon performance.</description>
+
+        <graphicData>
+            <texPath>Things/Resource/IC_ArmsINSPKit</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <MarketValue>80</MarketValue>
+            <Mass>1.0</Mass>
+            <Flammability>0.5</Flammability>
+            <DeteriorationRate>3.0</DeteriorationRate>
+        </statBases>
+
+        <!-- 5. Категорія на Складі -->
+        <thingCategories>
+            <li>Manufactured</li> <!-- Лежатиме поруч із компонентами та приладами -->
+        </thingCategories>
+
+        <stackLimit>50</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <burnableByRecipe>false</burnableByRecipe>
+
+        <tradeTags>
+            <li>IndustrialAdvanced</li>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
+</Defs>

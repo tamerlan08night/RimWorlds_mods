@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Зміна класу турелі на CE -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="IC_EndfieldNitrogenTurret"]/thingClass</xpath>
+                    <value>
+                        <thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="IC_EndfieldNitrogenTurret"]/statBases</xpath>
+                    <value>
+                        <AimingAccuracy>0.5</AimingAccuracy>
+                        <ShootingAccuracyTurret>0.95</ShootingAccuracyTurret>
+                    </value>
+                </li>
+
+                <!-- Снаряд рідкого азоту під CE -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Bullet_IC_Nitrogen"]/thingClass</xpath>
+                    <value>
+                        <thingClass>CombatExtended.BulletCE</thingClass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Bullet_IC_Nitrogen"]/projectile</xpath>
+                    <value>
+                        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                            <damageDef>Extinguish</damageDef>
+                            <damageAmountBase>200</damageAmountBase> <!-- Збільшено до 100 для збивання полум'я під CE -->
+                            <armorPenetrationSharp>0</armorPenetrationSharp>
+                            <armorPenetrationBlunt>0</armorPenetrationBlunt>
+                            <explosionRadius>4.9</explosionRadius>
+                            <speed>45</speed>
+                            <soundExplode>Explosion_ExtinguishInert</soundExplode>
+                            <postExplosionSpawnThingDef>IC_Filth_LiquidNitrogen</postExplosionSpawnThingDef>
+                            <postExplosionSpawnChance>1.0</postExplosionSpawnChance>
+                            <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+                        </projectile>
+                    </value>
+                </li>
+
+                <!-- Зброя турелі під CE -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Gun_IC_EndfieldNitrogenTurret"]/statBases</xpath>
+                    <value>
+                        <SightsEfficiency>1.0</SightsEfficiency>
+                        <ShotSpread>0.1</ShotSpread>
+                        <SwayFactor>1.0</SwayFactor>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Gun_IC_EndfieldNitrogenTurret"]/verbs</xpath>
+                    <value>
+                        <verbs>
+                            <li Class="CombatExtended.VerbPropertiesCE">
+                                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                                <hasStandardCommand>true</hasStandardCommand>
+                                <defaultProjectile>Bullet_IC_Nitrogen</defaultProjectile>
+                                <warmupTime>1.0</warmupTime>
+                                <minRange>3.9</minRange>
+                                <range>30</range>
+                                <burstShotCount>1</burstShotCount>
+                                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                                <soundCastTail>GunTail_Heavy</soundCastTail>
+                                <muzzleFlashScale>10</muzzleFlashScale>
+                                <targetParams>
+                                    <canTargetLocations>true</canTargetLocations>
+                                </targetParams>
+                            </li>
+                        </verbs>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Gun_IC_EndfieldNitrogenTurret"]</xpath>
+                    <value>
+                        <comps>
+                            <li Class="CombatExtended.CompProperties_FireModes">
+                                <aiAimMode>AimedShot</aiAimMode>
+                                <noSingleShot>false</noSingleShot>
+                            </li>
+                        </comps>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+</Patch>

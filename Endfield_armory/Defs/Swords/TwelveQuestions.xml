@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>RE_TwelveQuestions</defName>
+    <label>Twelve Questions</label>
+    <description>A weapon equipped by Endfield operators to significantly boost their combat capabilities. A razor sharp sword born of the wildlands. Different weaponsmiths would apply decorative wrappings on the weapon in very different ways.\n\n[Weapon Specification]: 5-Star Agile Blade. Imbued with active Physical Arts modules. High operational speed grants a 20% chance on every rapid strike to inflict physical resonance, softening up targets for consecutive critical execution.</description>
+    <graphicData>
+      <texPath>Things/Weapons/TwelveQuestion</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <smeltable>true</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="AKE.endfield.CompProperties_ArtsWeapon">
+        <appliesElement>Physical</appliesElement> 
+        <applyChance>0.2</applyChance> <bonusPerStage>0.15</bonusPerStage>       
+      </li>
+    </comps>
+
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>0.8</Mass>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    
+    <costList>
+      <Steel>90</Steel>
+      <IC_CastDie>1</IC_CastDie>
+      <IC_Origocrust>10</IC_Origocrust>
+    </costList>
+    
+    <recipeMaker>
+      <researchPrerequisite>EV_EndfieldMobilization</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>5</power> 
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities><li>Stab</li></capacities>
+        <power>14</power>
+        <cooldownTime>1.2</cooldownTime>
+        <armorPenetration>0.50</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities><li>Cut</li></capacities>
+        <power>16</power>
+        <cooldownTime>1.1</cooldownTime>
+        <armorPenetration>0.45</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

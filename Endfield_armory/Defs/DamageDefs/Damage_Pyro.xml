@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef ParentName="Arknights_Arts_DamageBase">
+    <defName>Arknights_Pyro_Damage</defName>
+    <label>pyro strike</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <deathMessage>Burned in the flames of resonance.</deathMessage>
+    <hediff>Burn</hediff> <additionalHediffs>
+      <li>
+        <hediff>Arknights_Arts_Pyro_Hediff</hediff>
+        <severityPerDamageDealt>0.05</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <armorCategory>Heat</armorCategory> <impactSoundType>Blunt</impactSoundType> </DamageDef>
+</Defs>

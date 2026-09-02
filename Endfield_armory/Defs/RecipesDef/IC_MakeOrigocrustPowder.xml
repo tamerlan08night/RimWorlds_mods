@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeOrigocrustPowder</defName>
+    <label>shred origocrust</label>
+    <description>Shred origocrust into a homogenized powder product.</description>
+    <jobString>Shredding origocrust.</jobString>
+    <workAmount>900</workAmount> <!-- 15 seconds (15 * 60 ticks) -->
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>EF_crasher</soundWorking>
+
+    <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>IC_Origocrust</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>IC_Origocrust</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>IC_AIC_ShreddingUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_OrigocrustPowder>1</IC_OrigocrustPowder>
+    </products>
+  </RecipeDef>
+</Defs>

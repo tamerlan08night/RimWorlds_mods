@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef>
+        <defName>IC_MakeAutomationpackage</defName>
+        <label>Craft automation package</label>
+        <description>A set of materials, chips, electronics, and devices for creating complex automated buildings. One of the important components in the construction of an automated factory.</description>
+        <jobString>Crafting automation package</jobString>
+        <workAmount>10800</workAmount> <!-- 180 seconds (180 * 60 ticks) -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>80</count>
+            </li>
+        </ingredients>
+
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ComponentIndustrial</li>
+                <li>Steel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <recipeUsers>
+            <li>TableMachining</li>
+        </recipeUsers>
+
+        <products>
+            <IC_Automationpackage>1</IC_Automationpackage>
+        </products>
+    </RecipeDef>
+</Defs>

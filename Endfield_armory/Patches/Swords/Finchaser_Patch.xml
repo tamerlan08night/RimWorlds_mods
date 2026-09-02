@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Combat Extended</li></mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="RE_Finchaser"]/tools</xpath>
+          <value>
+            <tools>
+              <li Class="CombatExtended.ToolCE">
+                <label>point</label>
+                <capacities><li>Stab</li></capacities>
+                <power>11</power>
+                <cooldownTime>1.1</cooldownTime>
+                <armorPenetrationSharp>9</armorPenetrationSharp>
+                <armorPenetrationBlunt>1.5</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+              </li>
+              <li Class="CombatExtended.ToolCE">
+                <label>blade</label>
+                <capacities><li>Cut</li></capacities>
+                <power>14</power>
+                <cooldownTime>0.95</cooldownTime>
+                <armorPenetrationSharp>6</armorPenetrationSharp>
+                <armorPenetrationBlunt>2.0</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+                <extraMeleeDamages>
+                  <li>
+                    <def>Arknights_Cryo_Damage</def>
+                    <amount>4</amount>
+                  </li>
+                </extraMeleeDamages>
+              </li>
+            </tools>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RE_Finchaser"]/statBases</xpath>
+          <value>
+            <Bulk>3.5</Bulk>
+            <MeleeCritChance>0.15</MeleeCritChance>
+            <MeleeParryChance>0.50</MeleeParryChance>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+</Patch>

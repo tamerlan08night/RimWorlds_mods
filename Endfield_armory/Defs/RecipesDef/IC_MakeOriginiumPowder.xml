@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>IC_MakeOriginiumPowder</defName>
+    <label>create originium powder</label>
+    <description>Grind raw origanum into a fine energy powder.</description>
+    <jobString>Crushes originium.</jobString>
+    <workAmount>600</workAmount> 
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>EF_crasher</soundWorking>
+
+    <researchPrerequisite>EM_MaterialsProcessing</researchPrerequisite>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>OE_RawOriginium</li>
+          </thingDefs>
+        </filter>
+        <count>2</count> 
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OE_RawOriginium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>IC_AIC_ShreddingUnit</li>
+    </recipeUsers>
+    
+    <products>
+      <IC_OriginiumPowder>1</IC_OriginiumPowder>
+    </products>
+  </RecipeDef>
+</Defs>
